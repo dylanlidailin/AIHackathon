@@ -119,7 +119,11 @@ def sweep_plot(rows, target: str, methods, path: Path, title: str) -> None:
             ax.fill_between(x, lo, hi, color=color, alpha=0.10, linewidth=0)
             ax.plot(x, y, METHOD_STYLE[m], color=color, linewidth=2, label=f"{probe} {METHOD_NAME[m]}")
     ax.axhline(0.5, color="#b5b4ad", linewidth=1, linestyle=":")
-    ax.set_ylim(0.3, 1.02)
+    lows = [_f(r["ci_lo"]) for r in rows if r["target"] == target and r["eval_group"] == "main"
+            and r["variant"] == "raw"] + [_f(r["auroc"]) for r in rows if r["target"] == target
+            and r["eval_group"] == "main" and r["variant"] == "raw"]
+    lows = [v for v in lows if v == v]
+    ax.set_ylim(min(0.3, (min(lows) if lows else 0.3) - 0.03), 1.02)  # never clip a value
     ax.xaxis.set_major_locator(MaxNLocator(integer=True))
     ax.set_xlabel("layer (0 = embeddings)")
     ax.set_ylabel("AUROC (fold-weighted, 95% CI)")
@@ -220,6 +224,9 @@ def build(cfg: dict[str, Any], base: Path, *, demo: bool = False) -> dict[str, A
                f"low accuracy = < {rcfg['low_acc']}.", ""]
     else:
         md += [f"No outcome classified: **{verdict['reason']}**.", ""]
+    md += [f"Headline-layer rule: best P1 text AUROC; layers within {pcfg.get('tie_tol', 0.001)} of the best "
+           "are tied and the tie goes to the largest text d′ (no image data used)."]
+    md += [f"- Note: {n}" for n in rcfg.get("notes", [])] + [""]
     md += ["Headline layers (chosen on training-modality data only): " + "; ".join(
         f"{METHOD_NAME[m]} P1/P2 L{_headline(present, 'present', 'P1', m)['layer']}, "
         f"P3 L{_headline(present, 'present', 'P3', m)['layer']}"

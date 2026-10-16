@@ -46,6 +46,7 @@ probe:
   C_grid: [0.01, 0.1, 1.0, 10.0]
   bootstrap: 1000
   p1_gate: 0.80
+  tie_tol: 0.001               # P1 AUROCs within this of the max are tied; ties go to the largest text d'
   low_power_min: 20
   min_class_for_auroc: 5
   n_jobs: -1
@@ -61,3 +62,5 @@ paths:
 report:
   works_auroc: 0.70           # "works" = headline AUROC >= this and CI lower bound > 0.5
   low_acc: 0.60               # below this, a working P2 is "shared direction, shifted threshold"
+  notes:
+    - "The d′ tie-break was added after inspecting the first full run's layer sweep, where P1 saturated at 1.0 in most layers and first-index argmax picked mid-layers (LR L1, DoM L11). The rule uses text data only; the full sweep is in layer_sweep_present.png."

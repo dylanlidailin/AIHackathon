@@ -39,7 +39,11 @@ AUROC SHALL be computed within each outer fold, then averaged across folds weigh
 - **THEN** the P2 AUROC matches the P1 AUROC up to sampling noise, and is not lowered by the offset
 
 ### Requirement: Hyperparameters and layer chosen from the training modality only
-The LR regularization strength SHALL be chosen by inner grouped cross-validation on the training modality only. The headline layer SHALL be chosen separately for each method: for P1/P2 it is the argmax of that method's P1 out-of-fold text AUROC, and for P3 it comes from that method's inner image CV. Image data MUST NOT influence any P2 choice.
+The LR regularization strength SHALL be chosen by inner grouped cross-validation on the training modality only. The headline layer SHALL be chosen separately for each method: for P1/P2 it is the layer with the best P1 out-of-fold text AUROC, where layers within a tolerance of the best are tied and the tie goes to the largest text d′; for P3 it comes from that method's inner image CV. Image data MUST NOT influence any P2 choice.
+
+#### Scenario: Saturated P1 ties
+- **WHEN** P1 text AUROC is 1.000 at several layers
+- **THEN** the P1/P2 headline layer is the tied layer with the largest text d′, not the first index
 
 #### Scenario: No image peeking for P2
 - **WHEN** the P2 headline layer is selected

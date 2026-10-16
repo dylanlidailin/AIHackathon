@@ -282,6 +282,22 @@ def _rows_out(target, probe, method, variant, eval_group, rows: Rows, scores, pr
     return out
 
 
+def d_prime(y: np.ndarray, s: np.ndarray) -> float:
+    a, b = s[y == 1], s[y == 0]
+    return float((a.mean() - b.mean()) / np.sqrt((a.var() + b.var()) / 2 + 1e-12))
+
+
+def select_layer(aucs: list[float], scores: np.ndarray, y: np.ndarray, tie_tol: float) -> int | None:
+    """Headline layer from training-modality (text) data only: the best P1 AUROC; layers
+    within ``tie_tol`` of it count as tied (P1 saturates at 1.0 in most layers) and the tie
+    is broken by the largest text d' of the out-of-fold P1 scores."""
+    a = np.asarray(aucs, dtype=float)
+    if not np.isfinite(a).any():
+        return None
+    tied = np.flatnonzero(a >= np.nanmax(a) - tie_tol)
+    return int(max(tied, key=lambda l: d_prime(y, scores[l])))
+
+
 def _write_scores(path: Path, rows: Rows, pair_ids: list[str], scores: np.ndarray) -> None:
     path.parent.mkdir(parents=True, exist_ok=True)
     with path.open("w", newline="") as f:
@@ -321,7 +337,7 @@ def run_target(target: str, acts, index, gens, cfg, out_dir: Path, fit_fn=None) 
         p1 = cv["oof"].get(("P1", method, "raw"))
         p1_auc = ([fold_auroc(text.y, p1["score"][l], p1["fold"]) for l in range(p1["score"].shape[0])]
                   if p1 else [])
-        l_star = int(np.nanargmax(p1_auc)) if p1_auc and np.isfinite(p1_auc).any() else None
+        l_star = select_layer(p1_auc, p1["score"], text.y, pcfg.get("tie_tol", 0.001)) if p1 else None
         inner = cv["inner_p3"].get(method)
         l_p3 = int(np.nanargmax(inner)) if inner is not None and np.isfinite(inner).any() else None
         headline[method] = {"P1": l_star, "P2": l_star, "P3": l_p3}

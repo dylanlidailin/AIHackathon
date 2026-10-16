@@ -154,3 +154,15 @@ def test_obey_low_power_and_omitted_auroc(pcfg_cfg, tmp_path):
     assert all(r["auroc"] == "nan" and "omitted" in r["note"] for r in img if r["variant"] == "raw")
     assert meta["n_excluded_repetition_image"] == 1
     assert meta["class_counts"]["image"]["pos"] == 3
+
+
+def test_select_layer_breaks_saturated_ties_by_text_dprime():
+    from xmprobe.probes import select_layer
+    y = np.r_[np.zeros(50, int), np.ones(50, int)]
+    rng = np.random.default_rng(0)
+    scores = np.stack([rng.normal(size=100) + y * gap for gap in (0.0, 4.0, 9.0, 6.0)])
+    aucs = [0.5, 1.0, 1.0, 0.9995]  # layers 1-3 tie within 0.001
+    assert select_layer(aucs, scores, y, tie_tol=0.001) == 2  # largest d'
+    assert select_layer(aucs, scores, y, tie_tol=0.0) == 2
+    assert select_layer([0.5, 0.97, 0.99, 0.95], scores, y, tie_tol=0.001) == 2
+    assert select_layer([float("nan")] * 4, scores, y, 0.001) is None
