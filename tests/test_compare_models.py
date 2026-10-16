@@ -75,7 +75,7 @@ def test_pattern_and_failure(tmp_path):
     out.mkdir()
     text = cm.report(runs, [rg, rf], out)
     assert "C1: not shared: good pass, flat fail" in text
-    assert "C5: **shared** by all models." in text
+    assert "**C5: shared** by all models." in text
     cm.plots(runs, out)
     assert (out / "p2_sweep_relative.png").exists() and (out / "direction_cosine_relative.png").exists()
 
