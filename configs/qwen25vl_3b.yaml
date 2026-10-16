@@ -62,4 +62,4 @@ report:
   works_auroc: 0.70           # "works" = headline AUROC >= this and CI lower bound > 0.5
   low_acc: 0.60               # below this, a working P2 is "shared direction, shifted threshold"
   notes:
-    - "The d′ tie-break was added after inspecting the first full run's layer sweep, where P1 saturated at 1.0 in most layers and first-index argmax picked mid-layers (LR L1, DoM L11). The rule uses text data only; the full sweep is in layer_sweep_present.png."
+    - "Headline-layer rule (best P1 text AUROC; ties within 0.001 broken by text d′) was fixed before this run, after the Qwen3.5-2B run; this run is a pre-specified test of it."
