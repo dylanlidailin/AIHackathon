@@ -1,0 +1,9 @@
+{
+  "font_size": 22,
+  "gate": 0.1,
+  "median_cer": 0.0,
+  "min_items": 30,
+  "n": 40,
+  "pass": true,
+  "reason": null
+}

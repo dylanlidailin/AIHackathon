@@ -62,9 +62,9 @@
 
 - [x] 10.1 Smoke run: `all --limit 10` on 0.8B in an interactive session. Verify that every stage produces valid output in < 20 min.
 - [x] 10.2 Demo run on 2B with 100 pairs. Verify that `demo/reports/headline.md` exists and that the manifest wall time is < 15 min (SC-007).
-- [ ] 10.3 OCR gate on 2B (n = 40). Verify that `ocr_summary.json` has `"pass": true`, or apply the D5 fallback chain.
-- [ ] 10.4 Full run: chained `generate` → `extract` → `probe` + `report` (after user approval of the `sbatch` submission). Verify that `headline.md` contains a classified outcome or an explicit gate label.
-- [ ] 10.5 Copy the summaries to `results/<run_name>/` and commit. Verify with `git show --stat`, which lists `headline.md`, the PNGs, the CSVs, and the manifest.
+- [x] 10.3 OCR gate on 2B (n = 40). Verify that `ocr_summary.json` has `"pass": true`, or apply the D5 fallback chain.
+- [x] 10.4 Full run: chained `generate` → `extract` → `probe` + `report` (after user approval of the `sbatch` submission). Verify that `headline.md` contains a classified outcome or an explicit gate label.
+- [x] 10.5 Copy the summaries to `results/<run_name>/` and commit. Verify with `git show --stat`, which lists `headline.md`, the PNGs, the CSVs, and the manifest.
 
 ## Workflow follow-up
 

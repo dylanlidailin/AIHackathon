@@ -1,0 +1,12 @@
+{
+  "labels": {
+    "dom": "ok",
+    "lr": "ok"
+  },
+  "outcome": "shifted",
+  "per_method": {
+    "dom": "shifted",
+    "lr": "shifted"
+  },
+  "reason": null
+}

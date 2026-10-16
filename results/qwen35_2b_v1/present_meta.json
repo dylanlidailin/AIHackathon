@@ -1,0 +1,26 @@
+{
+  "class_counts": {
+    "image": {
+      "neg": 173,
+      "pos": 173
+    },
+    "text": {
+      "neg": 173,
+      "pos": 173
+    }
+  },
+  "headline_layers": {
+    "dom": {
+      "P1": 19,
+      "P2": 19,
+      "P3": 20
+    },
+    "lr": {
+      "P1": 22,
+      "P2": 22,
+      "P3": 2
+    }
+  },
+  "n_folds": 5,
+  "target": "present"
+}
