@@ -24,12 +24,19 @@ Every probe SHALL be computed with two methods: logistic regression (LR) and dif
 - **WHEN** the DoM direction is computed for a fold
 - **THEN** it uses only that fold's training `team_id` groups from the training modality (text for P1/P2, image for P3)
 
-### Requirement: Grouped outer cross-validation with pooled scores
-Probes SHALL use 5-fold cross-validation grouped by `team_id` (seed 42). Out-of-fold scores SHALL be pooled so that each `main` pair is scored exactly once per probe, method, and layer.
+### Requirement: Grouped outer cross-validation with full coverage
+Probes SHALL use 5-fold cross-validation grouped by `team_id` (seed 42). Every `main` pair SHALL receive exactly one out-of-fold score per probe, method, and layer, together with the fold that produced it.
 
-#### Scenario: Pooled coverage
+#### Scenario: Full coverage
 - **WHEN** scoring finishes
-- **THEN** every `main` pair has exactly one out-of-fold score per probe × method × layer
+- **THEN** every `main` pair has exactly one out-of-fold score and fold id per probe × method × layer
+
+### Requirement: Fold-weighted AUROC
+AUROC SHALL be computed within each outer fold, then averaged across folds weighted by test-set size. Scores from different fold models MUST NOT be ranked together, because each model maps a modality offset to its own constant, and pooling would bias cross-modal AUROC downward.
+
+#### Scenario: Offset does not depress P2
+- **WHEN** image activations equal the text activations plus a constant offset, and the injection signal is identical
+- **THEN** the P2 AUROC matches the P1 AUROC up to sampling noise, and is not lowered by the offset
 
 ### Requirement: Hyperparameters and layer chosen from the training modality only
 The LR regularization strength SHALL be chosen by inner grouped cross-validation on the training modality only. The headline layer SHALL be chosen separately for each method: for P1/P2 it is the argmax of that method's P1 out-of-fold text AUROC, and for P3 it comes from that method's inner image CV. Image data MUST NOT influence any P2 choice.
@@ -39,7 +46,7 @@ The LR regularization strength SHALL be chosen by inner grouped cross-validation
 - **THEN** the selection uses only text-modality scores, and the chosen layer is recorded per method
 
 ### Requirement: AUROC is primary, with bootstrap intervals
-AUROC SHALL be the primary metric, with a 95% interval from a group-level bootstrap (B = 1000). Accuracy SHALL be reported as secondary, at a threshold chosen on training-modality data.
+AUROC SHALL be the primary metric, with a 95% interval from a team-level bootstrap (B = 1000) of the fold-weighted AUROC. Accuracy SHALL be reported as secondary, at a threshold chosen on training-modality data.
 
 #### Scenario: Interval columns
 - **WHEN** results are written

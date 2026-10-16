@@ -1,0 +1,32 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "xmprobe"
+version = "0.1.0"
+description = "Cross-modal prompt-injection probes: do text-trained probes detect image-delivered injections?"
+requires-python = ">=3.11"
+dependencies = [
+  "numpy",
+  "pandas",
+  "pillow",
+  "pyyaml",
+  "scikit-learn",
+  "scipy",
+  "statsmodels",
+  "rapidfuzz",
+  "matplotlib",
+]
+
+[project.optional-dependencies]
+# GPU stages; on Rivanna these come from the cloned torch311 env.
+gpu = ["torch", "transformers", "accelerate", "huggingface_hub"]
+dev = ["pytest"]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-q"

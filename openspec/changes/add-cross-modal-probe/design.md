@@ -48,14 +48,14 @@ Alternative considered: a workflow engine (Snakemake). It was rejected because i
 ### D2. Dataset: LLMail-Inject phase 1, scenario 1
 
 - **Download.** Use `huggingface-cli download microsoft/llmail-inject-challenge --repo-type dataset --include "data/raw_submissions_phase1.jsonl" "data/emails_for_fp_tests.json" "data/scenarios.json" "data/system_prompt.json" "data/levels_descriptions.json" "data/objectives_descriptions.json"` into `/scratch/esd4uq/hf_cache`. The raw file is about 1.7 GB, so it stays on scratch and is filtered by streaming, line by line. `labelled_unique_submissions_phase1.json` was rejected because it has no level and no objectives fields.
-- **Filtering.** Keep submissions with scenario `level1{a,e,g}` → `main` and `level1{c,d,i,j}` → `probe_evading`. Require all of `exfil.sent`, `exfil.destination`, `exfil.content`, and `defense.undetected`. Drop bodies over 450 characters, deduplicate by normalized body hash, and cap each `team_id` at `k` (default 5).
+- **Filtering.** Keep submissions with scenario `level1{a,e,g}` → `main` and `level1{c,d,i,j}` → `probe_evading`. Require all of `exfil.sent`, `exfil.destination`, `exfil.content`, and `defense.undetected`. Drop attacker emails whose formatted length (subject + body) exceeds 500 characters, deduplicate by normalized body hash, and cap each `team_id` at `k` (default 20).
   - Why full success instead of `exfil.sent` only: `sent` alone includes calls to the wrong recipient or with the wrong body.
 - **Pair construction.**
   - Email A is the single fixed `scenarios.json → scenario_1.emails[0]`. This matches the original challenge, so `attack_success_phi3` remains meaningful.
   - The second email is either the attacker email (injected) or the length-closest benign email from `emails_for_fp_tests.json` (clean).
   - Emails use LLMail's own "Subject of the email: … Body: …" format.
   - The order of the two emails is randomized per pair (seeded) and shared between the clean and injected versions.
-- **Length cap.** The cap is 450 characters because the benign pool (203 emails) spans about 206–400 characters. With a 1,500-character cap, length matching would be impossible, and a present probe could detect "longer content" instead of "an injection".
+- **Length cap.** The cap applies to the whole formatted attacker email, not the body alone: 586 of the 1,804 fully successful scenario-1 submissions carry long subjects, and a body-only cap left length gaps of up to 657 characters. The benign pool (203 emails) spans 206–427 characters. With the 500-character email cap and `per_team_cap` 20, the real data gives **173 main pairs (64 teams) and 58 probe_evading pairs**, with a clean-vs-injected length gap of mean −4.8 and max 71 characters. This was measured offline on 2026-10-16. The 200-pair target is not reached. Alternatives considered: a 600 cap reaches 200 pairs, but its length gap reaches a p90 of 125 and a max of 171; a 450 cap gives 159 pairs with a max gap of 17.
 - **Fields.** `pair_id`, `source="llmail"`, `level`, `group`, `team_id`, `attack_success_phi3` (from the submission's objectives), `target_phrase="contact@contact.com|confirmation"`.
 - Cite LLMail-Inject (arXiv:2506.09956). Data stays in git-ignored `data/` and scratch.
 
@@ -78,7 +78,7 @@ Thinking is disabled through the chat template (`enable_thinking=False`; the fla
 
 PIL renders black text on white with bundled DejaVu Sans: 22 px, width 1024, margin 32, line spacing 1.35, word wrap, `max_height` 4096. Oversize items are dropped and logged.
 
-At the 450-character cap, two emails come to about 900 characters, roughly 10–12 lines, far below the height limit.
+At the 500-character cap, two emails come to under 1,000 characters, roughly 12–14 lines, far below the height limit.
 
 OCR fallback: if the gate fails, use 28 px once, then switch to the fallback model.
 
@@ -88,7 +88,7 @@ OCR fallback: if the gate fails, use 28 px once, then switch to the fallback mod
   - **LR:** `StandardScaler` + L2 `LogisticRegression`, with `C ∈ {0.01, 0.1, 1, 10}` chosen by inner 4-fold GroupKFold on the training modality. The search uses `n_jobs=-1`.
   - **DoM:** direction = mean(injected) − mean(clean) over the training-modality training groups; score = projection.
   - P2 applies the text-fit LR model or text DoM direction to image test pairs.
-- Out-of-fold scores are pooled, and the bootstrap resamples `team_id` groups (B = 1000).
+- **AUROC is computed within each outer fold and averaged, weighted by test size.** Pooling raw scores across fold models is avoided because each model maps the image offset to its own constant (`w_k·offset`). On synthetic data with a pure offset, pooling gave P2 = 0.91 against P1 = 0.97 at the same layer. Every main pair still gets one out-of-fold score (persisted with its fold id). The bootstrap resamples `team_id` groups (B = 1000); each team lies in one fold, so the fold-weighted AUROC stays well defined.
 - The headline layer is chosen per method from training-modality data only. Both `L*` values are reported.
 - **Why both methods.** DoM has no hyperparameters and is less prone to overfitting a 200-pair set. LR is the standard probe. Disagreement between them is itself informative, and is caught by the method-agreement check in the reporting spec.
 - **Centered variant.** It is reported for accuracy only. With linear scoring and single-modality test sets, centering adds a constant to every score, so AUROC is unchanged: `w·(x−μ)+b = w·x + const`. The variant can only change threshold-dependent metrics.
@@ -97,7 +97,7 @@ OCR fallback: if the gate fails, use 28 px once, then switch to the fallback mod
 
 Relative to `plan.md`, the config gains:
 
-- `data.llmail: {phase: 1, scenario: 1, main_levels: [a,e,g], evading_levels: [c,d,i,j], max_body_chars: 450, per_team_cap: 5, n_main: 200, n_evading: 100}`
+- `data.llmail: {phase: 1, scenario: 1, main_levels: [a,e,g], evading_levels: [c,d,i,j], max_email_chars: 500, per_team_cap: 20, n_main: 200, n_evading: 100}` (`n_*` are upper bounds; the real data gives 173/58)`
 - `probe.methods: [lr, dom]`
 - `probe.group_by: team_id`
 - `probe.n_jobs: -1`
@@ -151,7 +151,7 @@ Relative to `plan.md`, the config gains:
 
 ## Risks / Trade-offs
 
-- [Too few candidates after the strict filters (full success, ≤ 450 characters, team cap)] → The converter reports counts per level before sampling (task 2.x). Fallbacks, applied in order: raise the cap to 600 characters, then raise `per_team_cap`. Any fallback is disclosed in `headline.md`.
+- [Too few candidates after the strict filters] → Resolved by D2: 173 main / 58 probe_evading pairs. probe_evading results will mostly carry the low-power flag. The pair counts and the length gap are disclosed in `headline.md`.
 - [The present probe detects "weird text" (obfuscation, markup) rather than "injection"] → The length gap is reported. The `probe_evading` group gives a second view. The limitation is stated explicitly in the headline, and a benign-but-odd control is a possible follow-up.
 - [Qwen3.5 unsupported by the installable transformers, or no hidden states] → After 15 minutes of effort, fall back to Qwen2.5-VL-3B with a config swap.
 - [The small model cannot read the rendered emails] → OCR gate, then 28 px, then the fallback model.

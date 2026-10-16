@@ -1,9 +1,13 @@
 <!--
 Sync Impact Report
-- Version change: (none) → 1.0.0
-- Added principles: I–VIII (initial ratification)
-- Added sections: Research Constraints, Compute & Environment, Development Workflow, Governance
-- Templates requiring updates: plan-template.md (Constitution Check uses gates G1–G8 below) ✅ reflected in specs/001-cross-modal-probe/plan.md
+- Version change: 1.0.0 → 1.1.0 (MINOR)
+- Modified: Research Constraints → Probe family (LR and difference of means are now co-primary)
+- Modified: Principle I (P1 ≥ 0.80 gate applies per method)
+- Modified: Principle V (splits grouped by submitting team, which subsumes pair-level grouping)
+- Modified: Principle VII (bootstrap resamples the split groups)
+- Modified: Compute & Environment (allocation `ai-safety-hackathon-rig`)
+- Modified: Development Workflow (OpenSpec replaces Spec Kit; CLI form `python -m xmprobe.cli <stage>`)
+- Artifacts reflecting this version: openspec/changes/add-cross-modal-probe/ (design.md D6, D8, D10), openspec/config.yaml
 - Follow-up TODOs: none
 -->
 
@@ -15,7 +19,7 @@ Sync Impact Report
 
 No cross-modal result may be reported without its controls in the same table or figure:
 
-- **P1 text sanity probe** (train text, test held-out text) must reach AUROC ≥ 0.80 at its best layer, otherwise the probing setup itself is broken and nothing downstream is interpreted.
+- **P1 text sanity probe** (train text, test held-out text) must reach AUROC ≥ 0.80 at its best layer, otherwise the probing setup itself is broken and nothing downstream is interpreted. The gate applies **per method**: a method's P2/P3 results are interpretable only if that method's P1 passes.
 - **P3 image-only control probe** (train images, test held-out images) must be reported next to every **P2 cross-modal** number.
 - **OCR check** must pass (see Principle II) before any image-condition probe result is interpreted as a statement about representations.
 
@@ -43,7 +47,7 @@ Between text and image conditions, everything except the delivery format of the 
 
 ### V. No Leakage, No Peeking
 
-- All splits are **grouped by pair ID**: the text and image versions of one item are always on the same side of any split.
+- All splits are **grouped by submitting team** (`team_id`): all items from one team, and the text and image versions of each item, are always on the same side of any split. This subsumes grouping by pair ID and also keeps near-duplicate attack variants from one team out of the test folds.
 - The headline layer for each probe is selected using **training-modality data only** (out-of-fold or inner cross-validation scores on that modality). The image data is never used to pick a layer, regularization strength, or threshold for P2.
 - The full layer sweep is always shown alongside the headline number.
 - If injection-template metadata exists, at least one template family is held out entirely from probe training.
@@ -58,7 +62,7 @@ Between text and image conditions, everything except the delivery format of the 
 ### VII. Scoped, Uncertain Claims
 
 - Every claim names the model(s), renderer settings, and dataset it was measured on.
-- Attack success rates carry Wilson 95% intervals; AUROCs carry pair-level bootstrap 95% intervals (B = 1000).
+- Attack success rates carry Wilson 95% intervals; AUROCs carry group-level bootstrap 95% intervals (B = 1000), resampling the same groups used for splits.
 - Text vs image attack success on the same items is compared with a paired test (McNemar).
 - Small-sample results (fewer than 20 positives in any class) are flagged as low-power in tables.
 
@@ -72,12 +76,12 @@ Between text and image conditions, everything except the delivery format of the 
 
 - **Primary model:** Qwen3.5-2B. **Fast check:** Qwen3.5-0.8B. **Fallback:** Qwen2.5-VL-3B if Qwen3.5 is not supported by the pinned toolchain.
 - **Scope:** image-*reading* models only; no image-generation models; no pixel-optimized attacks in this feature.
-- **Probe family:** linear (logistic regression) as the primary probe. A difference-of-means direction is reported as a training-free robustness check. Non-linear probes are optional and never replace the linear result.
+- **Probe family:** two co-primary linear methods, reported for every probe (P1, P2, P3): (a) logistic regression (LR) and (b) difference of means (DoM: direction = mean(injected) − mean(clean) on training pairs; score = projection; no fitted hyperparameters). Non-linear probes remain optional and never replace these.
 - **Activation site:** the hidden state of the last prompt token (after the generation prompt) at every layer. Other sites are optional extensions.
 
 ## Compute & Environment
 
-- Runs on UVA HPC (Rivanna/Afton) via SLURM under the `aikyamlab` allocation.
+- Runs on UVA HPC (Rivanna/Afton) via SLURM under the `ai-safety-hackathon-rig` allocation (partition `gpu`, A100).
 - The shared `torch311` conda environment is never modified; this project uses its own environment (`xmprobe`), cloned from it.
 - Hugging Face cache: `/scratch/esd4uq/hf_cache`. Large artifacts (activations, generations) live under `/scratch/esd4uq/xmprobe/`; only small summaries (CSV, JSON, PNG) are committed.
 - Scratch is not permanent storage: final results are copied to home or committed before the run is considered complete.
@@ -85,8 +89,8 @@ Between text and image conditions, everything except the delivery format of the 
 
 ## Development Workflow
 
-- Spec Kit flow: `spec.md` → `plan.md` (must pass the Constitution Check) → `tasks.md` → implementation.
-- Each pipeline stage is a CLI entry point (`python -m xmprobe.<stage> --config ...`) that can run alone.
+- OpenSpec flow: `proposal.md` → `specs/` + `design.md` (must respect every principle here) → `tasks.md` → implementation (`/opsx:apply`).
+- Each pipeline stage is a CLI entry point (`python -m xmprobe.cli <stage> --config ...`) that can run alone.
 - A smoke test (`--limit 10`, Qwen3.5-0.8B) must pass end-to-end before any full run is submitted.
 - Unit tests cover: renderer determinism, data-schema validation, grouped-split leakage, repetition/target-phrase scoring.
 - Results tables are regenerated from cached artifacts by a single `report` stage; numbers are never copied by hand.
@@ -98,4 +102,4 @@ Between text and image conditions, everything except the delivery format of the 
 - Versioning: MAJOR for removing or redefining a principle; MINOR for adding a principle or section; PATCH for wording clarifications.
 - Reviewers check every results PR against Principles I, III, IV, and V before merging.
 
-**Version**: 1.0.0 | **Ratified**: 2026-10-16 | **Last Amended**: 2026-10-16
+**Version**: 1.1.0 | **Ratified**: 2026-10-16 | **Last Amended**: 2026-10-16

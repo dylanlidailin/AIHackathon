@@ -31,12 +31,16 @@ A submission SHALL be kept only if its objectives parse and `exfil.sent`, `exfil
 - **WHEN** a submission has `exfil.sent = true` but `exfil.content = false`
 - **THEN** it is excluded and counted under the reason `partial_success`
 
-### Requirement: Attacker body length cap
-Attacker email bodies longer than the configured cap (default 450 characters) SHALL be dropped, so that clean content can be length-matched from the benign pool.
+### Requirement: Attacker email length cap
+An attacker email SHALL be dropped when its formatted length (subject plus body, in LLMail's email format) exceeds the configured cap (default 500 characters). This keeps it within the length range of the benign pool, so clean content can be length-matched.
 
 #### Scenario: Long body dropped
-- **WHEN** an attacker body has 900 characters and the cap is 450
+- **WHEN** an attacker body has 900 characters and the cap is 500
 - **THEN** the submission is excluded and counted under the reason `too_long`
+
+#### Scenario: Long subject dropped
+- **WHEN** an attacker body has 300 characters and its subject has 250 characters
+- **THEN** the formatted email exceeds 500 characters, and the submission is excluded as `too_long`
 
 ### Requirement: Deduplication and per-team cap
 Kept submissions SHALL be deduplicated by normalized body hash. At most `k` submissions per `team_id` (configurable) SHALL be sampled.
