@@ -17,6 +17,10 @@ CONFIG=${1:?usage: sbatch slurm/cpu_probe.sbatch <config>}
 module load miniforge
 eval "$(conda shell.bash hook)"
 conda activate xmprobe
+# `conda activate` can silently leave another python first on PATH in batch shells; pin the env
+# explicitly and ignore ~/.local user site-packages.
+export PATH=$HOME/.conda/envs/xmprobe/bin:$PATH PYTHONNOUSERSITE=1
+python -c 'import sys; assert sys.prefix.endswith("xmprobe"), sys.prefix'
 cd "$SLURM_SUBMIT_DIR"
 
 python -m xmprobe.cli probe  --config "$CONFIG"

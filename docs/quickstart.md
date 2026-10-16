@@ -15,8 +15,8 @@ ssh -Y esd4uq@login.hpc.virginia.edu
 
 ```bash
 cd ~
-git clone git@github.com:<your-github-user>/xmodal-injection-probe.git
-cd xmodal-injection-probe
+git clone https://github.com/dylanlidailin/AIHackathon.git
+cd AIHackathon
 mkdir -p logs data /scratch/esd4uq/xmprobe /scratch/esd4uq/hf_cache
 ```
 
@@ -29,10 +29,15 @@ module load miniforge
 eval "$(conda shell.bash hook)"
 conda create -y -n xmprobe --clone torch311
 conda activate xmprobe
-pip install -U transformers accelerate huggingface_hub
-pip install -e ".[dev]"
+# pin the env explicitly: in some shells `conda activate` leaves the module's python first on PATH,
+# and pip then installs into ~/.local for that python instead of the env
+export PATH=$HOME/.conda/envs/xmprobe/bin:$PATH PYTHONNOUSERSITE=1
+python -c "import sys; print(sys.prefix)"   # must end in /xmprobe
+python -m pip install -U transformers accelerate "huggingface_hub>=1.31,<2.0"
+python -m pip install --no-deps "torchvision==0.23.0" --index-url https://download.pytorch.org/whl/cu128   # match torch 2.8.0+cu128; the Qwen processor needs it
+python -m pip install -e ".[dev]"
 python -c "import torch, transformers; print('torch', torch.__version__, '| transformers', transformers.__version__)"
-pytest   # CPU unit tests, a few seconds
+python -m pytest   # CPU unit tests, under a minute
 ```
 
 ## 3. Data: LLMail-Inject → `data/pairs.jsonl` (login node, CPU only)
@@ -56,7 +61,8 @@ python -m xmprobe.cli validate_data --config configs/qwen35_2b.yaml
 srun -A ai-safety-hackathon-rig -p gpu --time=04:00:00 --nodes=1 --ntasks-per-node=1 \
      --cpus-per-task=16 --mem=128G --gres=gpu:a100:1 --pty bash
 module load miniforge && eval "$(conda shell.bash hook)" && conda activate xmprobe
-cd ~/xmodal-injection-probe
+export PATH=$HOME/.conda/envs/xmprobe/bin:$PATH PYTHONNOUSERSITE=1
+cd ~/AIHackathon
 export HF_HOME=/scratch/esd4uq/hf_cache
 
 # R1: confirm these IDs on huggingface.co first
@@ -99,7 +105,7 @@ Demo numbers are a signal check (AUROC CIs roughly ±0.05–0.10), not final res
 The job scripts are `slurm/gpu_stage.sbatch` and `slurm/cpu_probe.sbatch`. Dry-run a submission first:
 
 ```bash
-cd ~/xmodal-injection-probe
+cd ~/AIHackathon
 CFG=configs/qwen35_2b.yaml
 RUN=/scratch/esd4uq/xmprobe/runs/qwen35_2b_v1
 sbatch --test-only slurm/gpu_stage.sbatch $CFG render

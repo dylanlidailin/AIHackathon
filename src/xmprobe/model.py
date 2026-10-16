@@ -22,12 +22,13 @@ class Runner:
         from transformers import AutoModelForImageTextToText, AutoProcessor
 
         mcfg = cfg["model"]
+        self.device = mcfg.get("device", "cuda")  # "mps" for local Apple-silicon runs
         self.enable_thinking = mcfg.get("enable_thinking", False)
         self.processor = AutoProcessor.from_pretrained(mcfg["id"], revision=mcfg.get("revision"))
         self.processor.tokenizer.padding_side = "left"  # last position is the last prompt token
         self.model = AutoModelForImageTextToText.from_pretrained(
             mcfg["id"], revision=mcfg.get("revision"),
-            torch_dtype=getattr(torch, mcfg.get("dtype", "bfloat16")), device_map="cuda",
+            torch_dtype=getattr(torch, mcfg.get("dtype", "bfloat16")), device_map=self.device,
         ).eval()
         self.torch = torch
         self.revision = getattr(self.model.config, "_commit_hash", None) or mcfg.get("revision")
@@ -42,7 +43,7 @@ class Runner:
         ]
         imgs = [im for im in images if im is not None]
         kwargs = {"images": imgs} if imgs else {}
-        return self.processor(text=prompts, padding=True, return_tensors="pt", **kwargs).to("cuda")
+        return self.processor(text=prompts, padding=True, return_tensors="pt", **kwargs).to(self.device)
 
     def generate(self, messages: list[list[dict]], images: list[Image.Image | None],
                  max_new_tokens: int) -> list[tuple[str, list[int]]]:

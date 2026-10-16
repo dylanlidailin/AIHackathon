@@ -1,7 +1,7 @@
 run_name: qwen35_0p8b_v1
 model:
-  id: Qwen/Qwen3.5-0.8B        # R1: verify on huggingface.co
-  revision: main               # pin to commit hash after first download
+  id: Qwen/Qwen3.5-0.8B        # R1: verified 2026-10-16
+  revision: 2fc06364715b967f1860aea9cf38778875588b17  # pinned 2026-10-16 (R1)
   dtype: bfloat16
   enable_thinking: false       # R3: verify flag name in the chat template
 data:

@@ -77,3 +77,10 @@ def test_stamp_skip_and_invalidation(cfg, tmp_path):
     # missing output invalidates the stamp
     (out / "a.png").unlink()
     assert not is_done(out, "render", key)
+
+
+def test_manifest_revision_follows_current_config(cfg, monkeypatch):
+    _fake_stage(monkeypatch, "noop", lambda cfg, limit=None, force=False: {})
+    cli.run_stage("noop", with_overrides(cfg, **{"model.revision": "main"}))
+    cli.run_stage("noop", with_overrides(cfg, **{"model.revision": "abc123"}))
+    assert json.loads(cli.manifest_path(cfg).read_text())["model_revision"] == "abc123"

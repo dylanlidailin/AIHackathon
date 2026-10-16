@@ -19,6 +19,10 @@ LIMIT=${3:-}
 module load miniforge
 eval "$(conda shell.bash hook)"
 conda activate xmprobe
+# `conda activate` can silently leave another python first on PATH in batch shells; pin the env
+# explicitly and ignore ~/.local user site-packages.
+export PATH=$HOME/.conda/envs/xmprobe/bin:$PATH PYTHONNOUSERSITE=1
+python -c 'import sys; assert sys.prefix.endswith("xmprobe"), sys.prefix'
 export HF_HOME=/scratch/esd4uq/hf_cache
 export HF_HUB_OFFLINE=1
 export TOKENIZERS_PARALLELISM=false

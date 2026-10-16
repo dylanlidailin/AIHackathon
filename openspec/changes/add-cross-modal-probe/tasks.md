@@ -22,7 +22,7 @@
 - [x] 3.2 Implement pair construction: fixed scenario-1 Email A, a length-matched benign email, a seeded shared order, and the LLMail email format. Verify with tests showing that clean and injected differ only in the second email, and that the same seed gives identical output.
 - [x] 3.3 Implement the `data.py` schema validation and the `validate_data` stage. Verify with accept/reject tests (pair-data spec scenarios).
 - [x] 3.4 Implement the grouped fold generator (by `team_id`, seed 42), excluding `probe_evading`. Verify that `tests/test_splits.py` asserts disjoint teams and no evading pairs in train.
-- [ ] 3.5 On Rivanna, download the LLMail files (design D2 command) into `/scratch/esd4uq/hf_cache`, run the converter, and record the candidate counts. Verify that the conversion report exists. If main < 200, apply the D2/Risks fallback and note it.
+- [x] 3.5 On Rivanna, download the LLMail files (design D2 command) into `/scratch/esd4uq/hf_cache`, run the converter, and record the candidate counts. Verify that the conversion report exists. If main < 200, apply the D2/Risks fallback and note it.
 
 ## 4. Rendering and prompts
 
@@ -31,19 +31,19 @@
 
 ## 5. Model, toolchain, and environment (Rivanna)
 
-- [ ] 5.1 Create the `xmprobe` env by cloning `torch311` and install the dependencies (docs/quickstart.md). Verify that the printed torch and transformers versions are recorded.
+- [x] 5.1 Create the `xmprobe` env by cloning `torch311` and install the dependencies (docs/quickstart.md). Verify that the printed torch and transformers versions are recorded.
 - [x] 5.2 Implement `model.py`: load the model and processor, use bf16, and pin and resolve the revision. Write `scripts/check_toolchain.py`.
-- [ ] 5.3 In an interactive `srun` session (D8), run the toolchain check on 0.8B and 2B. Verify that `hidden_states == L+1`, that no `<think>` appears, and that R1/R3 are recorded in the configs. If this fails for more than 15 minutes, switch to `qwen25vl_3b.yaml`.
+- [x] 5.3 In an interactive `srun` session (D8), run the toolchain check on 0.8B and 2B. Verify that `hidden_states == L+1`, that no `<think>` appears, and that R1/R3 are recorded in the configs. If this fails for more than 15 minutes, switch to `qwen25vl_3b.yaml`.
 
 ## 6. OCR gate, generation, and scoring
 
 - [x] 6.1 Implement `ocr_check.py`: seeded sample, transcription, CER, and a summary with `pass`/`reason`. Verify with unit tests on CER and the `n < 30` rule.
 - [x] 6.2 Implement `scoring.py`: `target_hit`, `destination_hit`, `content_hit` (LLMail JSON and native tool-call markup), repetition, Wilson CIs, and McNemar. Verify that `tests/test_scoring.py` covers the spec scenarios (full hit, destination only, prose mention, looping).
-- [ ] 6.3 Implement `generate.py` (greedy, batched, thinking off) and `behavior_summary.csv` per group. Verify on a 3-pair run that the CSV has all columns.
+- [x] 6.3 Implement `generate.py` (greedy, batched, thinking off) and `behavior_summary.csv` per group. Verify on a 3-pair run that the CSV has all columns.
 
 ## 7. Activation extraction
 
-- [ ] 7.1 Implement `extract.py`: last prompt token, all layers, float16 cache, `index.json`, and reuse keyed by the config hash. Verify on 10 pairs that the shape is `[10, L+1, H]` and that a second run skips the work.
+- [x] 7.1 Implement `extract.py`: last prompt token, all layers, float16 cache, `index.json`, and reuse keyed by the config hash. Verify on 10 pairs that the shape is `[10, L+1, H]` and that a second run skips the work.
 
 ## 8. Probes
 
@@ -55,13 +55,13 @@
 ## 9. Report and demo
 
 - [x] 9.1 Implement `report.py`: sweep plots (LR solid, DoM dashed), `headline.md` with the OCR and P1 per-method gates, the method-agreement check, outcome classification, length gap, scope line, and low-power flags. Verify with a test that a fixture with LR P1 = 0.92 and DoM P1 = 0.71 labels DoM "not interpretable (P1)", and that a second run is byte-identical.
-- [ ] 9.2 Implement the `demo` stage: a stratified 100-pair sample, mini OCR, extract, present probes, and a report into `demo/`, labeled "signal check" and without classification. Verify with a 10-pair demo run on 0.8B that the labels are present.
-- [ ] 9.3 Write `slurm/gpu_stage.sbatch` and `slurm/cpu_probe.sbatch` with account `ai-safety-hackathon-rig` (D8). Update `docs/quickstart.md` with the `srun` line, the demo step 3b, and the LLMail download. Verify that `sbatch --test-only slurm/gpu_stage.sbatch configs/qwen35_0p8b.yaml render` is accepted. Get user approval before any real submission.
+- [x] 9.2 Implement the `demo` stage: a stratified 100-pair sample, mini OCR, extract, present probes, and a report into `demo/`, labeled "signal check" and without classification. Verify with a 10-pair demo run on 0.8B that the labels are present.
+- [x] 9.3 Write `slurm/gpu_stage.sbatch` and `slurm/cpu_probe.sbatch` with account `ai-safety-hackathon-rig` (D8). Update `docs/quickstart.md` with the `srun` line, the demo step 3b, and the LLMail download. Verify that `sbatch --test-only slurm/gpu_stage.sbatch configs/qwen35_0p8b.yaml render` is accepted. Get user approval before any real submission.
 
 ## 10. Runs (integration)
 
-- [ ] 10.1 Smoke run: `all --limit 10` on 0.8B in an interactive session. Verify that every stage produces valid output in < 20 min.
-- [ ] 10.2 Demo run on 2B with 100 pairs. Verify that `demo/reports/headline.md` exists and that the manifest wall time is < 15 min (SC-007).
+- [x] 10.1 Smoke run: `all --limit 10` on 0.8B in an interactive session. Verify that every stage produces valid output in < 20 min.
+- [x] 10.2 Demo run on 2B with 100 pairs. Verify that `demo/reports/headline.md` exists and that the manifest wall time is < 15 min (SC-007).
 - [ ] 10.3 OCR gate on 2B (n = 40). Verify that `ocr_summary.json` has `"pass": true`, or apply the D5 fallback chain.
 - [ ] 10.4 Full run: chained `generate` → `extract` → `probe` + `report` (after user approval of the `sbatch` submission). Verify that `headline.md` contains a classified outcome or an explicit gate label.
 - [ ] 10.5 Copy the summaries to `results/<run_name>/` and commit. Verify with `git show --stat`, which lists `headline.md`, the PNGs, the CSVs, and the manifest.

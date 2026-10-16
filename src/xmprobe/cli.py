@@ -96,7 +96,8 @@ def update_manifest(cfg: dict[str, Any], stage: str, record: dict[str, Any]) -> 
         config_path=cfg.get("_path"),
         packages=_versions(),
         model_id=cfg["model"]["id"],
-        model_revision=manifest.get("model_revision") or cfg["model"].get("revision"),
+        # current config wins over a stale value from an earlier run in the same dir
+        model_revision=cfg["model"].get("revision"),
         gpu=_gpu() or manifest.get("gpu"),
         slurm_job_id=os.environ.get("SLURM_JOB_ID"),
         font_sha256=_font_sha256(cfg),

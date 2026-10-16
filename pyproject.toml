@@ -21,7 +21,7 @@ dependencies = [
 
 [project.optional-dependencies]
 # GPU stages; on Rivanna these come from the cloned torch311 env.
-gpu = ["torch", "transformers", "accelerate", "huggingface_hub"]
+gpu = ["torch", "torchvision", "transformers", "accelerate", "huggingface_hub"]  # processor needs torchvision
 dev = ["pytest"]
 
 [tool.setuptools.packages.find]
