@@ -2,12 +2,12 @@
 
 ## 1. Repository and project rules
 
-- [ ] 1.1 Commit the current Spec Kit docs and the zip once (a snapshot for rollback). Verify with `git log -1 --stat`, which lists them.
+- [x] 1.1 Commit the current Spec Kit docs and the zip once (a snapshot for rollback). Verify with `git log -1 --stat`, which lists them.
 - [ ] 1.2 Rename `README-2.md` → `README.md`, replace the Spec Kit links (`specs/001-…`, `.specify/…`) with `openspec/` paths, and add the LLMail citation. Verify that `grep -n "specs/001\|.specify" README.md` returns nothing.
 - [ ] 1.3 Move `quickstart.md` → `docs/quickstart.md` and the PDF → `docs/papers/`. Delete `plan.md` and `xmodal-injection-probe.zip`. Verify with `ls`, which shows only the README, the constitution, docs/, and openspec/ at the root.
 - [ ] 1.4 Amend `constitution.md` to v1.1.0 per design D10: LR + DoM co-primary, P1 gate per method, grouping by `team_id`, account `ai-safety-hackathon-rig`, updated Sync Impact Report and dates. Verify that the version line reads 1.1.0 and that no `aikyamlab` remains.
 - [ ] 1.5 Add `context` and `rules` to `openspec/config.yaml` per D10. Verify that `openspec validate add-cross-modal-probe` still passes.
-- [ ] 1.6 Add a `.gitignore` covering `data/`, `logs/`, `__pycache__/`, and `*.npy`. Verify that `git check-ignore data/pairs.jsonl` succeeds.
+- [x] 1.6 Add a `.gitignore` covering `data/`, `logs/`, `__pycache__/`, and `*.npy`. Verify that `git check-ignore data/pairs.jsonl` succeeds.
 
 ## 2. Package scaffold, config, and provenance
 
