@@ -1,6 +1,6 @@
 # Quickstart: Running on UVA HPC (Rivanna)
 
-Step-by-step commands for the cross-modal probe pipeline. Gates from [design.md](../openspec/changes/add-cross-modal-probe/design.md) (D9) are marked **GATE**; stop and check before continuing.
+Step-by-step commands for the cross-modal probe pipeline. Gates are marked **GATE**; stop and check before continuing.
 
 Compute: account `ai-safety-hackathon-rig`, partition `gpu`, one A100, 16 CPUs, 128 GB, at most 4 h per job. **Never submit an `sbatch` job without the team agreeing first.**
 

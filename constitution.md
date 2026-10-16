@@ -7,7 +7,7 @@ Sync Impact Report
 - Modified: Principle VII (bootstrap resamples the split groups)
 - Modified: Compute & Environment (allocation `ai-safety-hackathon-rig`)
 - Modified: Development Workflow (OpenSpec replaces Spec Kit; CLI form `python -m xmprobe.cli <stage>`)
-- Artifacts reflecting this version: openspec/changes/add-cross-modal-probe/ (design.md D6, D8, D10), openspec/config.yaml
+- Artifacts reflecting this version: the local OpenSpec planning workspace (not tracked in the repo), configs/*.yaml
 - Follow-up TODOs: none
 -->
 

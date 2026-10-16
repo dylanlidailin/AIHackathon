@@ -6,7 +6,7 @@
 
 [English](#english) · [简体中文](#简体中文)
 
-Status: **planned** — see the OpenSpec change [`openspec/changes/add-cross-modal-probe/`](openspec/changes/add-cross-modal-probe/) for the proposal, design, specs, and tasks, [`docs/quickstart.md`](docs/quickstart.md) for the HPC workflow, and [`constitution.md`](constitution.md) for the project rules.
+Status: **first full run complete** (Qwen3.5-2B, 173 + 58 LLMail pairs). Outcome: *shared direction, shifted threshold*. See [`results/qwen35_2b_v1/headline.md`](results/qwen35_2b_v1/headline.md) for the results, [`docs/quickstart.md`](docs/quickstart.md) for the HPC workflow, and [`constitution.md`](constitution.md) for the project rules.
 
 ---
 
@@ -96,15 +96,14 @@ All claims are scoped to the models, renderer, and data tested.
 .
 ├── README.md
 ├── constitution.md                     # project rules
-├── openspec/
-│   ├── config.yaml                     # OpenSpec project context and rules
-│   └── changes/add-cross-modal-probe/  # proposal, design, specs, tasks
 ├── docs/
 │   ├── quickstart.md                   # how to run on UVA HPC
 │   └── papers/                         # reference papers
 ├── configs/                            # one YAML per model
-├── src/xmprobe/                        # pipeline code (to be implemented)
+├── src/xmprobe/                        # pipeline code (CLI stages)
+├── scripts/                            # data conversion, toolchain check, post-hoc analyses
 ├── slurm/                              # job scripts
+├── results/                            # committed summaries per run
 └── tests/
 ```
 
@@ -213,15 +212,14 @@ This project studies detection of prompt injection to support defenses. Injected
 .
 ├── README.md
 ├── constitution.md                     # 项目规则
-├── openspec/
-│   ├── config.yaml                     # OpenSpec 项目上下文与规则
-│   └── changes/add-cross-modal-probe/  # 提案、设计、规格、任务
 ├── docs/
 │   ├── quickstart.md                   # 如何在 UVA HPC 上运行
 │   └── papers/                         # 参考论文
 ├── configs/                            # 每个模型一个 YAML
-├── src/xmprobe/                        # 流水线代码（待实现）
+├── src/xmprobe/                        # 流水线代码（命令行各阶段）
+├── scripts/                            # 数据转换、工具链检查、事后分析
 ├── slurm/                              # 作业脚本
+├── results/                            # 每次运行提交的结果摘要
 └── tests/
 ```
 
