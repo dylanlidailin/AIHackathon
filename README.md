@@ -6,7 +6,7 @@
 
 [English](#english) · [简体中文](#简体中文)
 
-Status: **planned** — see [`specs/001-cross-modal-probe/`](specs/001-cross-modal-probe/) for the spec, plan, and HPC quickstart, and [`.specify/memory/constitution.md`](.specify/memory/constitution.md) for the project rules.
+Status: **planned** — see the OpenSpec change [`openspec/changes/add-cross-modal-probe/`](openspec/changes/add-cross-modal-probe/) for the proposal, design, specs, and tasks, [`docs/quickstart.md`](docs/quickstart.md) for the HPC workflow, and [`constitution.md`](constitution.md) for the project rules.
 
 ---
 
@@ -95,11 +95,13 @@ All claims are scoped to the models, renderer, and data tested.
 ```
 .
 ├── README.md
-├── .specify/memory/constitution.md     # project rules (Spec Kit)
-├── specs/001-cross-modal-probe/
-│   ├── spec.md                         # what we are testing and why
-│   ├── plan.md                         # how: design, data contracts, stages
-│   └── quickstart.md                   # how to run on UVA HPC
+├── constitution.md                     # project rules
+├── openspec/
+│   ├── config.yaml                     # OpenSpec project context and rules
+│   └── changes/add-cross-modal-probe/  # proposal, design, specs, tasks
+├── docs/
+│   ├── quickstart.md                   # how to run on UVA HPC
+│   └── papers/                         # reference papers
 ├── configs/                            # one YAML per model
 ├── src/xmprobe/                        # pipeline code (to be implemented)
 ├── slurm/                              # job scripts
@@ -108,10 +110,11 @@ All claims are scoped to the models, renderer, and data tested.
 
 ### Running
 
-See [`specs/001-cross-modal-probe/quickstart.md`](specs/001-cross-modal-probe/quickstart.md) for the step-by-step HPC workflow (environment, model download, smoke test, full run, collecting results).
+See [`docs/quickstart.md`](docs/quickstart.md) for the step-by-step HPC workflow (environment, model download, smoke test, full run, collecting results).
 
 ### Related work
 
+- Abdelnabi et al. *LLMail-Inject: A Dataset from a Realistic Adaptive Prompt Injection Challenge* (2025). [arXiv:2506.09956](https://arxiv.org/abs/2506.09956). Source of the injection pairs (`microsoft/llmail-inject-challenge`, MIT).
 - Zhang, Baroian, van Rijn, Shafran, Tramèr. *Render Before Reading: Visual Rendering as a Prompt Injection Defense* (2026). [arXiv:2609.36121](https://arxiv.org/abs/2609.36121)
 - Lu et al. *ARGUS: Defending Against Multimodal Indirect Prompt Injection via Steering Instruction-Following Behavior* (2025). [arXiv:2512.05745](https://arxiv.org/abs/2512.05745)
 - Özdinçer, Simko, Schölkopf, Jin. *Improved Robustness against Indirect Prompt Injection Can Be Built into LLMs* (COLM 2026). [GitHub](https://github.com/memo-ozdincer/odile)
@@ -209,11 +212,13 @@ This project studies detection of prompt injection to support defenses. Injected
 ```
 .
 ├── README.md
-├── .specify/memory/constitution.md     # 项目规则（Spec Kit）
-├── specs/001-cross-modal-probe/
-│   ├── spec.md                         # 测什么、为什么
-│   ├── plan.md                         # 怎么做：设计、数据约定、流程阶段
-│   └── quickstart.md                   # 如何在 UVA HPC 上运行
+├── constitution.md                     # 项目规则
+├── openspec/
+│   ├── config.yaml                     # OpenSpec 项目上下文与规则
+│   └── changes/add-cross-modal-probe/  # 提案、设计、规格、任务
+├── docs/
+│   ├── quickstart.md                   # 如何在 UVA HPC 上运行
+│   └── papers/                         # 参考论文
 ├── configs/                            # 每个模型一个 YAML
 ├── src/xmprobe/                        # 流水线代码（待实现）
 ├── slurm/                              # 作业脚本
@@ -222,10 +227,11 @@ This project studies detection of prompt injection to support defenses. Injected
 
 ### 运行
 
-在 HPC 上的分步流程（环境配置、模型下载、冒烟测试、完整运行、结果收集）见 [`specs/001-cross-modal-probe/quickstart.md`](specs/001-cross-modal-probe/quickstart.md)。
+在 HPC 上的分步流程（环境配置、模型下载、冒烟测试、完整运行、结果收集）见 [`docs/quickstart.md`](docs/quickstart.md)。
 
 ### 相关工作
 
+- Abdelnabi 等. *LLMail-Inject: A Dataset from a Realistic Adaptive Prompt Injection Challenge*（2025）. [arXiv:2506.09956](https://arxiv.org/abs/2506.09956)。注入样本对的数据来源（`microsoft/llmail-inject-challenge`，MIT 许可）。
 - Zhang, Baroian, van Rijn, Shafran, Tramèr. *Render Before Reading: Visual Rendering as a Prompt Injection Defense*（2026）. [arXiv:2609.36121](https://arxiv.org/abs/2609.36121)
 - Lu 等. *ARGUS: Defending Against Multimodal Indirect Prompt Injection via Steering Instruction-Following Behavior*（2025）. [arXiv:2512.05745](https://arxiv.org/abs/2512.05745)
 - Özdinçer, Simko, Schölkopf, Jin. *Improved Robustness against Indirect Prompt Injection Can Be Built into LLMs*（COLM 2026）. [GitHub](https://github.com/memo-ozdincer/odile)
