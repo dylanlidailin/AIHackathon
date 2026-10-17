@@ -1,0 +1,68 @@
+{
+  "Qwen2.5-VL-3B-Instruct": {
+    "C1": {
+      "detail": "LR L25 1.000 [1.000], DOM L35 0.998 [0.993]",
+      "pass": true
+    },
+    "C2": {
+      "detail": "LR acc 0.99, DOM acc 0.91",
+      "pass": false
+    },
+    "C3": {
+      "detail": "LR mid-min 1.00, late-median 1.00; DOM mid-min 0.98, late-median 0.99",
+      "pass": false
+    },
+    "C4": {
+      "detail": "cos median middle 0.74, late 0.86 (gap +0.13)",
+      "pass": false
+    },
+    "C5": {
+      "detail": "LR 0.91 [0.79, 1.00], DOM 0.96 [0.88, 1.00]",
+      "pass": false
+    }
+  },
+  "Qwen3.5-2B": {
+    "C1": {
+      "detail": "LR L22 1.000 [1.000], DOM L19 0.999 [0.997]",
+      "pass": true
+    },
+    "C2": {
+      "detail": "LR acc 0.50, DOM acc 0.50",
+      "pass": true
+    },
+    "C3": {
+      "detail": "LR mid-min 0.41, late-median 1.00; DOM mid-min 0.29, late-median 1.00",
+      "pass": true
+    },
+    "C4": {
+      "detail": "cos median middle 0.13, late 0.64 (gap +0.52)",
+      "pass": true
+    },
+    "C5": {
+      "detail": "LR 0.41 [0.30, 0.59], DOM 0.57 [0.41, 0.78]",
+      "pass": true
+    }
+  },
+  "Qwen3.5-4B": {
+    "C1": {
+      "detail": "LR L17 1.000 [1.000], DOM L18 1.000 [1.000]",
+      "pass": true
+    },
+    "C2": {
+      "detail": "LR acc 0.50, DOM acc 0.64",
+      "pass": true
+    },
+    "C3": {
+      "detail": "LR mid-min 1.00, late-median 1.00; DOM mid-min 0.99, late-median 0.99",
+      "pass": false
+    },
+    "C4": {
+      "detail": "cos median middle 0.52, late 0.81 (gap +0.29)",
+      "pass": true
+    },
+    "C5": {
+      "detail": "LR 0.87 [0.75, 0.94], DOM 0.85 [0.72, 0.95]",
+      "pass": false
+    }
+  }
+}

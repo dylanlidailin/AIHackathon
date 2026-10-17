@@ -1,0 +1,593 @@
+target,probe,method,variant,eval_group,layer,auroc,ci_lo,ci_hi,acc,n_pos,n_neg,low_power,headline_layer,is_headline,note
+obey,P1,lr,raw,main,0,0.5,0.5,0.5,0.5433526011560693,79,94,False,31,False,
+obey,P1,lr,raw,main,1,0.6328481042163732,0.5113437901217107,0.755242713472234,0.5549132947976878,79,94,False,31,False,
+obey,P1,lr,raw,main,2,0.7073078870728703,0.6022061347905275,0.8188242851395988,0.6358381502890174,79,94,False,31,False,
+obey,P1,lr,raw,main,3,0.6918784605010647,0.5892354316252628,0.811417343149216,0.6416184971098265,79,94,False,31,False,
+obey,P1,lr,raw,main,4,0.6797568334380016,0.5888221302125004,0.7881927953059361,0.6184971098265896,79,94,False,31,False,
+obey,P1,lr,raw,main,5,0.6774862315286715,0.5964646155855793,0.7745951642066997,0.6473988439306358,79,94,False,31,False,
+obey,P1,lr,raw,main,6,0.7275135011863032,0.6445749027517874,0.8094650884657858,0.653179190751445,79,94,False,31,False,
+obey,P1,lr,raw,main,7,0.7312712424478474,0.6441438680397039,0.8031974969430523,0.6589595375722543,79,94,False,31,False,
+obey,P1,lr,raw,main,8,0.6985100138849758,0.5962243660955381,0.7726174247689142,0.6763005780346821,79,94,False,31,False,
+obey,P1,lr,raw,main,9,0.7095694991382548,0.6136943195196387,0.78129018600623,0.6473988439306358,79,94,False,31,False,
+obey,P1,lr,raw,main,10,0.7022487497122423,0.6109924313618441,0.7848751234122172,0.630057803468208,79,94,False,31,False,
+obey,P1,lr,raw,main,11,0.7071256313574538,0.6132529678286524,0.794866139937198,0.6069364161849711,79,94,False,31,False,
+obey,P1,lr,raw,main,12,0.7158715059574506,0.6475681896888038,0.8005020759468668,0.653179190751445,79,94,False,31,False,
+obey,P1,lr,raw,main,13,0.7372140430134041,0.6613063060478371,0.8321629175997904,0.6705202312138728,79,94,False,31,False,
+obey,P1,lr,raw,main,14,0.7359207042999254,0.6503782550913124,0.8354045353467895,0.6705202312138728,79,94,False,31,False,
+obey,P1,lr,raw,main,15,0.7952875417014449,0.7274661186797747,0.8670934814883816,0.7109826589595376,79,94,False,31,False,
+obey,P1,lr,raw,main,16,0.813036372071967,0.7348491734529453,0.890940353373416,0.7398843930635838,79,94,False,31,False,
+obey,P1,lr,raw,main,17,0.8181688557867445,0.7509975544575239,0.8896981130531416,0.7630057803468208,79,94,False,31,False,
+obey,P1,lr,raw,main,18,0.840636391377949,0.7753196253399972,0.9110410176573375,0.7745664739884393,79,94,False,31,False,
+obey,P1,lr,raw,main,19,0.8592576633723576,0.7896054804800513,0.9225672898840658,0.7745664739884393,79,94,False,31,False,
+obey,P1,lr,raw,main,20,0.838566810855372,0.7733128712657257,0.9076738420352547,0.7687861271676301,79,94,False,31,False,
+obey,P1,lr,raw,main,21,0.823915220009683,0.7559100671911081,0.9031196431792412,0.7456647398843931,79,94,False,31,False,
+obey,P1,lr,raw,main,22,0.8319132077232169,0.7616423483674021,0.9247644422921362,0.7341040462427746,79,94,False,31,False,
+obey,P1,lr,raw,main,23,0.8672734956960694,0.8046283749518399,0.9410971953837479,0.7687861271676301,79,94,False,31,False,
+obey,P1,lr,raw,main,24,0.8639184536012952,0.801991743347948,0.932698388629511,0.7630057803468208,79,94,False,31,False,
+obey,P1,lr,raw,main,25,0.8876577897645741,0.8252003419902444,0.944889051572927,0.815028901734104,79,94,False,31,False,
+obey,P1,lr,raw,main,26,0.8901438482249251,0.8243291564504869,0.9543008063174238,0.7976878612716763,79,94,False,31,False,
+obey,P1,lr,raw,main,27,0.8858032373433956,0.8149799408212337,0.9529554343467097,0.7687861271676301,79,94,False,31,False,
+obey,P1,lr,raw,main,28,0.8949415553347709,0.8265779698107102,0.9576411347249962,0.7976878612716763,79,94,False,31,False,
+obey,P1,lr,raw,main,29,0.9051029029618929,0.8325636610426089,0.9600497389399848,0.7803468208092486,79,94,False,31,False,
+obey,P1,lr,raw,main,30,0.9014379765520624,0.825414331353885,0.9571678461707047,0.7861271676300579,79,94,False,31,False,
+obey,P1,lr,raw,main,31,0.9086912158253806,0.8429082118889345,0.9572952387429116,0.7687861271676301,79,94,False,31,True,
+obey,P1,lr,raw,main,32,0.8879616002258228,0.8160481752669416,0.9492744289927522,0.7745664739884393,79,94,False,31,False,
+obey,P1,lr,raw,main,33,0.8907826222893153,0.8123733620363915,0.9497509488704857,0.7745664739884393,79,94,False,31,False,
+obey,P1,lr,raw,main,34,0.8812835615353107,0.8088238380034901,0.9484195635863438,0.7572254335260116,79,94,False,31,False,
+obey,P1,lr,raw,main,35,0.860747529605911,0.7840184402552526,0.9359675511304144,0.7572254335260116,79,94,False,31,False,
+obey,P1,lr,raw,main,36,0.8701766758239226,0.7915472837602737,0.9360509581044626,0.7803468208092486,79,94,False,31,False,
+obey,P1,lr,centered,main,0,nan,nan,nan,0.5433526011560693,79,94,False,31,False,centering shifts all scores in a modality by a constant; AUROC unchanged
+obey,P1,lr,centered,main,1,nan,nan,nan,0.5549132947976878,79,94,False,31,False,centering shifts all scores in a modality by a constant; AUROC unchanged
+obey,P1,lr,centered,main,2,nan,nan,nan,0.6358381502890174,79,94,False,31,False,centering shifts all scores in a modality by a constant; AUROC unchanged
+obey,P1,lr,centered,main,3,nan,nan,nan,0.6416184971098265,79,94,False,31,False,centering shifts all scores in a modality by a constant; AUROC unchanged
+obey,P1,lr,centered,main,4,nan,nan,nan,0.6184971098265896,79,94,False,31,False,centering shifts all scores in a modality by a constant; AUROC unchanged
+obey,P1,lr,centered,main,5,nan,nan,nan,0.6473988439306358,79,94,False,31,False,centering shifts all scores in a modality by a constant; AUROC unchanged
+obey,P1,lr,centered,main,6,nan,nan,nan,0.653179190751445,79,94,False,31,False,centering shifts all scores in a modality by a constant; AUROC unchanged
+obey,P1,lr,centered,main,7,nan,nan,nan,0.6589595375722543,79,94,False,31,False,centering shifts all scores in a modality by a constant; AUROC unchanged
+obey,P1,lr,centered,main,8,nan,nan,nan,0.6763005780346821,79,94,False,31,False,centering shifts all scores in a modality by a constant; AUROC unchanged
+obey,P1,lr,centered,main,9,nan,nan,nan,0.6473988439306358,79,94,False,31,False,centering shifts all scores in a modality by a constant; AUROC unchanged
+obey,P1,lr,centered,main,10,nan,nan,nan,0.630057803468208,79,94,False,31,False,centering shifts all scores in a modality by a constant; AUROC unchanged
+obey,P1,lr,centered,main,11,nan,nan,nan,0.6069364161849711,79,94,False,31,False,centering shifts all scores in a modality by a constant; AUROC unchanged
+obey,P1,lr,centered,main,12,nan,nan,nan,0.653179190751445,79,94,False,31,False,centering shifts all scores in a modality by a constant; AUROC unchanged
+obey,P1,lr,centered,main,13,nan,nan,nan,0.6705202312138728,79,94,False,31,False,centering shifts all scores in a modality by a constant; AUROC unchanged
+obey,P1,lr,centered,main,14,nan,nan,nan,0.6705202312138728,79,94,False,31,False,centering shifts all scores in a modality by a constant; AUROC unchanged
+obey,P1,lr,centered,main,15,nan,nan,nan,0.7109826589595376,79,94,False,31,False,centering shifts all scores in a modality by a constant; AUROC unchanged
+obey,P1,lr,centered,main,16,nan,nan,nan,0.7398843930635838,79,94,False,31,False,centering shifts all scores in a modality by a constant; AUROC unchanged
+obey,P1,lr,centered,main,17,nan,nan,nan,0.7630057803468208,79,94,False,31,False,centering shifts all scores in a modality by a constant; AUROC unchanged
+obey,P1,lr,centered,main,18,nan,nan,nan,0.7745664739884393,79,94,False,31,False,centering shifts all scores in a modality by a constant; AUROC unchanged
+obey,P1,lr,centered,main,19,nan,nan,nan,0.7745664739884393,79,94,False,31,False,centering shifts all scores in a modality by a constant; AUROC unchanged
+obey,P1,lr,centered,main,20,nan,nan,nan,0.7687861271676301,79,94,False,31,False,centering shifts all scores in a modality by a constant; AUROC unchanged
+obey,P1,lr,centered,main,21,nan,nan,nan,0.7456647398843931,79,94,False,31,False,centering shifts all scores in a modality by a constant; AUROC unchanged
+obey,P1,lr,centered,main,22,nan,nan,nan,0.7341040462427746,79,94,False,31,False,centering shifts all scores in a modality by a constant; AUROC unchanged
+obey,P1,lr,centered,main,23,nan,nan,nan,0.7687861271676301,79,94,False,31,False,centering shifts all scores in a modality by a constant; AUROC unchanged
+obey,P1,lr,centered,main,24,nan,nan,nan,0.7630057803468208,79,94,False,31,False,centering shifts all scores in a modality by a constant; AUROC unchanged
+obey,P1,lr,centered,main,25,nan,nan,nan,0.815028901734104,79,94,False,31,False,centering shifts all scores in a modality by a constant; AUROC unchanged
+obey,P1,lr,centered,main,26,nan,nan,nan,0.7976878612716763,79,94,False,31,False,centering shifts all scores in a modality by a constant; AUROC unchanged
+obey,P1,lr,centered,main,27,nan,nan,nan,0.7687861271676301,79,94,False,31,False,centering shifts all scores in a modality by a constant; AUROC unchanged
+obey,P1,lr,centered,main,28,nan,nan,nan,0.7976878612716763,79,94,False,31,False,centering shifts all scores in a modality by a constant; AUROC unchanged
+obey,P1,lr,centered,main,29,nan,nan,nan,0.7803468208092486,79,94,False,31,False,centering shifts all scores in a modality by a constant; AUROC unchanged
+obey,P1,lr,centered,main,30,nan,nan,nan,0.7861271676300579,79,94,False,31,False,centering shifts all scores in a modality by a constant; AUROC unchanged
+obey,P1,lr,centered,main,31,nan,nan,nan,0.7687861271676301,79,94,False,31,True,centering shifts all scores in a modality by a constant; AUROC unchanged
+obey,P1,lr,centered,main,32,nan,nan,nan,0.7745664739884393,79,94,False,31,False,centering shifts all scores in a modality by a constant; AUROC unchanged
+obey,P1,lr,centered,main,33,nan,nan,nan,0.7745664739884393,79,94,False,31,False,centering shifts all scores in a modality by a constant; AUROC unchanged
+obey,P1,lr,centered,main,34,nan,nan,nan,0.7572254335260116,79,94,False,31,False,centering shifts all scores in a modality by a constant; AUROC unchanged
+obey,P1,lr,centered,main,35,nan,nan,nan,0.7572254335260116,79,94,False,31,False,centering shifts all scores in a modality by a constant; AUROC unchanged
+obey,P1,lr,centered,main,36,nan,nan,nan,0.7803468208092486,79,94,False,31,False,centering shifts all scores in a modality by a constant; AUROC unchanged
+obey,P2,lr,raw,main,0,0.5,0.5,0.5,0.9479768786127167,9,164,True,31,False,
+obey,P2,lr,raw,main,1,0.5028272836276433,0.18300993124522538,0.8011567604094778,0.07514450867052024,9,164,True,31,False,
+obey,P2,lr,raw,main,2,0.3336467189884456,0.06118389514088113,0.6752476283085695,0.05202312138728324,9,164,True,31,False,
+obey,P2,lr,raw,main,3,0.35391459559625027,0.09090417171602738,0.6536042899235668,0.05202312138728324,9,164,True,31,False,
+obey,P2,lr,raw,main,4,0.4135259973839111,0.11957627396900447,0.6785076376247932,0.07514450867052024,9,164,True,31,False,
+obey,P2,lr,raw,main,5,0.3747002398081535,0.14708385429003987,0.5918278378147956,0.1907514450867052,9,164,True,31,False,
+obey,P2,lr,raw,main,6,0.4576793110965773,0.2835137361242765,0.7159272554739423,0.3236994219653179,9,164,True,31,False,
+obey,P2,lr,raw,main,7,0.5412374645737955,0.40038529735973455,0.7904285838666143,0.3179190751445087,9,164,True,31,False,
+obey,P2,lr,raw,main,8,0.5587870612600828,0.4360532555053638,0.8101160175608705,0.5317919075144508,9,164,True,31,False,
+obey,P2,lr,raw,main,9,0.4561736974057118,0.3147073544132368,0.748518180857248,0.34104046242774566,9,164,True,31,False,
+obey,P2,lr,raw,main,10,0.31719397209505124,0.15925980628122854,0.5826564071678727,0.3063583815028902,9,164,True,31,False,
+obey,P2,lr,raw,main,11,0.45526079136690645,0.2595460162884235,0.6525092194781735,0.42196531791907516,9,164,True,31,False,
+obey,P2,lr,raw,main,12,0.5020710704163942,0.24105143918616084,0.7838475312516752,0.5433526011560693,9,164,True,31,False,
+obey,P2,lr,raw,main,13,0.5499441356006104,0.3909033280174584,0.8028053916197523,0.48554913294797686,9,164,True,31,False,
+obey,P2,lr,raw,main,14,0.4940661107477654,0.32250454696870867,0.773864160577054,0.7514450867052023,9,164,True,31,False,
+obey,P2,lr,raw,main,15,0.7329749836494441,0.5937231626437721,0.9454739167364657,0.9248554913294798,9,164,True,31,False,
+obey,P2,lr,raw,main,16,0.6895370067582298,0.5547921895108303,0.8899897983457767,0.884393063583815,9,164,True,31,False,
+obey,P2,lr,raw,main,17,0.7275929256594723,0.5713507394235333,0.9288601190476184,0.6011560693641619,9,164,True,31,False,
+obey,P2,lr,raw,main,18,0.8404390124264225,0.6528990919261324,0.9915201670946155,0.8439306358381503,9,164,True,31,False,
+obey,P2,lr,raw,main,19,0.8602299978199258,0.7435524347261266,1.0,0.8265895953757225,9,164,True,31,False,
+obey,P2,lr,raw,main,20,0.86597313058644,0.7071719126052197,1.0,0.815028901734104,9,164,True,31,False,
+obey,P2,lr,raw,main,21,0.8361469914977109,0.678036638774793,1.0,0.7398843930635838,9,164,True,31,False,
+obey,P2,lr,raw,main,22,0.7593879441901024,0.48730595710379676,0.9839302017740932,0.5317919075144508,9,164,True,31,False,
+obey,P2,lr,raw,main,23,0.699320089383039,0.4088566660681258,0.9725129870129869,0.4913294797687861,9,164,True,31,False,
+obey,P2,lr,raw,main,24,0.7384047307608459,0.49234699825876294,0.9612365568207959,0.6878612716763006,9,164,True,31,False,
+obey,P2,lr,raw,main,25,0.7629646282973622,0.46750952893389497,0.9685219542362399,0.8034682080924855,9,164,True,31,False,
+obey,P2,lr,raw,main,26,0.8828823304992369,0.7499593852733715,0.9843058259427502,0.8323699421965318,9,164,True,31,False,
+obey,P2,lr,raw,main,27,0.8642835731414867,0.7468339948946837,0.9843046836652977,0.9075144508670521,9,164,True,31,False,
+obey,P2,lr,raw,main,28,0.8948046108567691,0.7647426616585072,1.0,0.8728323699421965,9,164,True,31,False,
+obey,P2,lr,raw,main,29,0.8881281338565511,0.7463063411349912,1.0,0.8901734104046243,9,164,True,31,False,
+obey,P2,lr,raw,main,30,0.906031992587748,0.7707071517354834,1.0,0.8034682080924855,9,164,True,31,False,
+obey,P2,lr,raw,main,31,0.9112777959450621,0.7888697498846224,1.0,0.8323699421965318,9,164,True,31,True,
+obey,P2,lr,raw,main,32,0.9279894266405059,0.8166548510929547,1.0,0.8208092485549133,9,164,True,31,False,
+obey,P2,lr,raw,main,33,0.9425346086766951,0.8539329145536888,1.0,0.8208092485549133,9,164,True,31,False,
+obey,P2,lr,raw,main,34,0.9608949204272945,0.893865012064185,1.0,0.791907514450867,9,164,True,31,False,
+obey,P2,lr,raw,main,35,0.9329763461957706,0.8517012854429522,1.0,0.8786127167630058,9,164,True,31,False,
+obey,P2,lr,raw,main,36,0.9355992478744276,0.8516832099972856,0.9868506986127784,0.8497109826589595,9,164,True,31,False,
+obey,P2,lr,centered,main,0,nan,nan,nan,0.9479768786127167,9,164,True,31,False,centering shifts all scores in a modality by a constant; AUROC unchanged
+obey,P2,lr,centered,main,1,nan,nan,nan,0.5202312138728323,9,164,True,31,False,centering shifts all scores in a modality by a constant; AUROC unchanged
+obey,P2,lr,centered,main,2,nan,nan,nan,0.3872832369942196,9,164,True,31,False,centering shifts all scores in a modality by a constant; AUROC unchanged
+obey,P2,lr,centered,main,3,nan,nan,nan,0.4046242774566474,9,164,True,31,False,centering shifts all scores in a modality by a constant; AUROC unchanged
+obey,P2,lr,centered,main,4,nan,nan,nan,0.4393063583815029,9,164,True,31,False,centering shifts all scores in a modality by a constant; AUROC unchanged
+obey,P2,lr,centered,main,5,nan,nan,nan,0.42196531791907516,9,164,True,31,False,centering shifts all scores in a modality by a constant; AUROC unchanged
+obey,P2,lr,centered,main,6,nan,nan,nan,0.7052023121387283,9,164,True,31,False,centering shifts all scores in a modality by a constant; AUROC unchanged
+obey,P2,lr,centered,main,7,nan,nan,nan,0.7514450867052023,9,164,True,31,False,centering shifts all scores in a modality by a constant; AUROC unchanged
+obey,P2,lr,centered,main,8,nan,nan,nan,0.6589595375722543,9,164,True,31,False,centering shifts all scores in a modality by a constant; AUROC unchanged
+obey,P2,lr,centered,main,9,nan,nan,nan,0.6416184971098265,9,164,True,31,False,centering shifts all scores in a modality by a constant; AUROC unchanged
+obey,P2,lr,centered,main,10,nan,nan,nan,0.6358381502890174,9,164,True,31,False,centering shifts all scores in a modality by a constant; AUROC unchanged
+obey,P2,lr,centered,main,11,nan,nan,nan,0.6473988439306358,9,164,True,31,False,centering shifts all scores in a modality by a constant; AUROC unchanged
+obey,P2,lr,centered,main,12,nan,nan,nan,0.6763005780346821,9,164,True,31,False,centering shifts all scores in a modality by a constant; AUROC unchanged
+obey,P2,lr,centered,main,13,nan,nan,nan,0.6184971098265896,9,164,True,31,False,centering shifts all scores in a modality by a constant; AUROC unchanged
+obey,P2,lr,centered,main,14,nan,nan,nan,0.5606936416184971,9,164,True,31,False,centering shifts all scores in a modality by a constant; AUROC unchanged
+obey,P2,lr,centered,main,15,nan,nan,nan,0.5664739884393064,9,164,True,31,False,centering shifts all scores in a modality by a constant; AUROC unchanged
+obey,P2,lr,centered,main,16,nan,nan,nan,0.5838150289017341,9,164,True,31,False,centering shifts all scores in a modality by a constant; AUROC unchanged
+obey,P2,lr,centered,main,17,nan,nan,nan,0.6069364161849711,9,164,True,31,False,centering shifts all scores in a modality by a constant; AUROC unchanged
+obey,P2,lr,centered,main,18,nan,nan,nan,0.6705202312138728,9,164,True,31,False,centering shifts all scores in a modality by a constant; AUROC unchanged
+obey,P2,lr,centered,main,19,nan,nan,nan,0.6473988439306358,9,164,True,31,False,centering shifts all scores in a modality by a constant; AUROC unchanged
+obey,P2,lr,centered,main,20,nan,nan,nan,0.6936416184971098,9,164,True,31,False,centering shifts all scores in a modality by a constant; AUROC unchanged
+obey,P2,lr,centered,main,21,nan,nan,nan,0.6705202312138728,9,164,True,31,False,centering shifts all scores in a modality by a constant; AUROC unchanged
+obey,P2,lr,centered,main,22,nan,nan,nan,0.6936416184971098,9,164,True,31,False,centering shifts all scores in a modality by a constant; AUROC unchanged
+obey,P2,lr,centered,main,23,nan,nan,nan,0.6473988439306358,9,164,True,31,False,centering shifts all scores in a modality by a constant; AUROC unchanged
+obey,P2,lr,centered,main,24,nan,nan,nan,0.6705202312138728,9,164,True,31,False,centering shifts all scores in a modality by a constant; AUROC unchanged
+obey,P2,lr,centered,main,25,nan,nan,nan,0.6705202312138728,9,164,True,31,False,centering shifts all scores in a modality by a constant; AUROC unchanged
+obey,P2,lr,centered,main,26,nan,nan,nan,0.6705202312138728,9,164,True,31,False,centering shifts all scores in a modality by a constant; AUROC unchanged
+obey,P2,lr,centered,main,27,nan,nan,nan,0.653179190751445,9,164,True,31,False,centering shifts all scores in a modality by a constant; AUROC unchanged
+obey,P2,lr,centered,main,28,nan,nan,nan,0.6705202312138728,9,164,True,31,False,centering shifts all scores in a modality by a constant; AUROC unchanged
+obey,P2,lr,centered,main,29,nan,nan,nan,0.6473988439306358,9,164,True,31,False,centering shifts all scores in a modality by a constant; AUROC unchanged
+obey,P2,lr,centered,main,30,nan,nan,nan,0.6358381502890174,9,164,True,31,False,centering shifts all scores in a modality by a constant; AUROC unchanged
+obey,P2,lr,centered,main,31,nan,nan,nan,0.653179190751445,9,164,True,31,True,centering shifts all scores in a modality by a constant; AUROC unchanged
+obey,P2,lr,centered,main,32,nan,nan,nan,0.6763005780346821,9,164,True,31,False,centering shifts all scores in a modality by a constant; AUROC unchanged
+obey,P2,lr,centered,main,33,nan,nan,nan,0.7109826589595376,9,164,True,31,False,centering shifts all scores in a modality by a constant; AUROC unchanged
+obey,P2,lr,centered,main,34,nan,nan,nan,0.7283236994219653,9,164,True,31,False,centering shifts all scores in a modality by a constant; AUROC unchanged
+obey,P2,lr,centered,main,35,nan,nan,nan,0.7167630057803468,9,164,True,31,False,centering shifts all scores in a modality by a constant; AUROC unchanged
+obey,P2,lr,centered,main,36,nan,nan,nan,0.6763005780346821,9,164,True,31,False,centering shifts all scores in a modality by a constant; AUROC unchanged
+obey,P3,lr,raw,main,0,0.5,0.5,0.5,0.9479768786127167,9,164,True,32,False,
+obey,P3,lr,raw,main,1,0.6330185851318945,0.3851318614454207,0.8841962103313594,0.9075144508670521,9,164,True,32,False,
+obey,P3,lr,raw,main,2,0.5773653804229344,0.3938032188234576,0.8690956662505852,0.9075144508670521,9,164,True,32,False,
+obey,P3,lr,raw,main,3,0.7723593852190973,0.49749217527386547,0.9262094370665798,0.930635838150289,9,164,True,32,False,
+obey,P3,lr,raw,main,4,0.8035957597558319,0.5834884644567744,0.9435252717419789,0.9364161849710982,9,164,True,32,False,
+obey,P3,lr,raw,main,5,0.7885941247002398,0.5855245874197488,0.9113736282920867,0.9421965317919075,9,164,True,32,False,
+obey,P3,lr,raw,main,6,0.7829531829082189,0.5328724344252415,0.9316916728377173,0.9421965317919075,9,164,True,32,False,
+obey,P3,lr,raw,main,7,0.9088933398735557,0.8061787457968507,0.9782631027253668,0.9364161849710982,9,164,True,32,False,
+obey,P3,lr,raw,main,8,0.8638475583169827,0.6094641325771931,0.9809521269180935,0.9364161849710982,9,164,True,32,False,
+obey,P3,lr,raw,main,9,0.7847994331807282,0.5956996947126701,0.9358508703364095,0.9248554913294798,9,164,True,32,False,
+obey,P3,lr,raw,main,10,0.8029008611292784,0.6863489371179695,0.9125020496687163,0.9364161849710982,9,164,True,32,False,
+obey,P3,lr,raw,main,11,0.7626648681055156,0.6474348924459219,0.9263124823166159,0.930635838150289,9,164,True,32,False,
+obey,P3,lr,raw,main,12,0.7249700239808153,0.5307366834940366,0.9648322707953855,0.9421965317919075,9,164,True,32,False,
+obey,P3,lr,raw,main,13,0.7884169936777851,0.6357531092603944,0.9671554751153807,0.9479768786127167,9,164,True,32,False,
+obey,P3,lr,raw,main,14,0.7361974057117942,0.5166452568842989,0.9560973691014013,0.9364161849710982,9,164,True,32,False,
+obey,P3,lr,raw,main,15,0.7264415740135164,0.5045979575736326,0.9759030706622269,0.9421965317919075,9,164,True,32,False,
+obey,P3,lr,raw,main,16,0.8099384129060387,0.5483479575897345,0.9965579710144926,0.953757225433526,9,164,True,32,False,
+obey,P3,lr,raw,main,17,0.7381458469587966,0.4357345501676712,0.9837288490955574,0.9364161849710982,9,164,True,32,False,
+obey,P3,lr,raw,main,18,0.8724316001744059,0.6931284435740894,1.0,0.9653179190751445,9,164,True,32,False,
+obey,P3,lr,raw,main,19,0.8299882821015914,0.5998543386366663,1.0,0.9653179190751445,9,164,True,32,False,
+obey,P3,lr,raw,main,20,0.8662320143884892,0.6542228575116936,1.0,0.953757225433526,9,164,True,32,False,
+obey,P3,lr,raw,main,21,0.9058139851754959,0.7610061383806589,1.0,0.9595375722543352,9,164,True,32,False,
+obey,P3,lr,raw,main,22,0.9134442446043165,0.7992860990860992,1.0,0.953757225433526,9,164,True,32,False,
+obey,P3,lr,raw,main,23,0.9081984412470023,0.7881165421711551,1.0,0.953757225433526,9,164,True,32,False,
+obey,P3,lr,raw,main,24,0.9213129496402878,0.8156627934441233,1.0,0.953757225433526,9,164,True,32,False,
+obey,P3,lr,raw,main,25,0.9363145846958797,0.8609973838104032,1.0,0.9421965317919075,9,164,True,32,False,
+obey,P3,lr,raw,main,26,0.8511895029431,0.6080139407582836,1.0,0.930635838150289,9,164,True,32,False,
+obey,P3,lr,raw,main,27,0.8843334423370395,0.7184890539255608,1.0,0.9421965317919075,9,164,True,32,False,
+obey,P3,lr,raw,main,28,0.9331739154131241,0.8658442046277444,1.0,0.9479768786127167,9,164,True,32,False,
+obey,P3,lr,raw,main,29,0.9293587856987138,0.8740574458186088,1.0,0.9479768786127167,9,164,True,32,False,
+obey,P3,lr,raw,main,30,0.9527877697841727,0.8851167156369576,1.0,0.9479768786127167,9,164,True,32,False,
+obey,P3,lr,raw,main,31,0.9176953891432309,0.8502455958008867,1.0,0.9479768786127167,9,164,True,32,False,
+obey,P3,lr,raw,main,32,0.9554106714628297,0.8894219114219114,1.0,0.953757225433526,9,164,True,32,True,
+obey,P3,lr,raw,main,33,0.8398939938957924,0.6902251978088861,1.0,0.953757225433526,9,164,True,32,False,
+obey,P3,lr,raw,main,34,0.8743323522999782,0.768985401542819,1.0,0.9421965317919075,9,164,True,32,False,
+obey,P3,lr,raw,main,35,0.8743323522999782,0.7685538070649948,1.0,0.9364161849710982,9,164,True,32,False,
+obey,P3,lr,raw,main,36,0.8913233049923698,0.7988134726442062,1.0,0.9595375722543352,9,164,True,32,False,
+obey,P3,lr,centered,main,0,nan,nan,nan,0.9479768786127167,9,164,True,32,False,centering shifts all scores in a modality by a constant; AUROC unchanged
+obey,P3,lr,centered,main,1,nan,nan,nan,0.9075144508670521,9,164,True,32,False,centering shifts all scores in a modality by a constant; AUROC unchanged
+obey,P3,lr,centered,main,2,nan,nan,nan,0.9075144508670521,9,164,True,32,False,centering shifts all scores in a modality by a constant; AUROC unchanged
+obey,P3,lr,centered,main,3,nan,nan,nan,0.930635838150289,9,164,True,32,False,centering shifts all scores in a modality by a constant; AUROC unchanged
+obey,P3,lr,centered,main,4,nan,nan,nan,0.9364161849710982,9,164,True,32,False,centering shifts all scores in a modality by a constant; AUROC unchanged
+obey,P3,lr,centered,main,5,nan,nan,nan,0.9421965317919075,9,164,True,32,False,centering shifts all scores in a modality by a constant; AUROC unchanged
+obey,P3,lr,centered,main,6,nan,nan,nan,0.9421965317919075,9,164,True,32,False,centering shifts all scores in a modality by a constant; AUROC unchanged
+obey,P3,lr,centered,main,7,nan,nan,nan,0.9364161849710982,9,164,True,32,False,centering shifts all scores in a modality by a constant; AUROC unchanged
+obey,P3,lr,centered,main,8,nan,nan,nan,0.9364161849710982,9,164,True,32,False,centering shifts all scores in a modality by a constant; AUROC unchanged
+obey,P3,lr,centered,main,9,nan,nan,nan,0.9248554913294798,9,164,True,32,False,centering shifts all scores in a modality by a constant; AUROC unchanged
+obey,P3,lr,centered,main,10,nan,nan,nan,0.9364161849710982,9,164,True,32,False,centering shifts all scores in a modality by a constant; AUROC unchanged
+obey,P3,lr,centered,main,11,nan,nan,nan,0.930635838150289,9,164,True,32,False,centering shifts all scores in a modality by a constant; AUROC unchanged
+obey,P3,lr,centered,main,12,nan,nan,nan,0.9421965317919075,9,164,True,32,False,centering shifts all scores in a modality by a constant; AUROC unchanged
+obey,P3,lr,centered,main,13,nan,nan,nan,0.9479768786127167,9,164,True,32,False,centering shifts all scores in a modality by a constant; AUROC unchanged
+obey,P3,lr,centered,main,14,nan,nan,nan,0.9364161849710982,9,164,True,32,False,centering shifts all scores in a modality by a constant; AUROC unchanged
+obey,P3,lr,centered,main,15,nan,nan,nan,0.9421965317919075,9,164,True,32,False,centering shifts all scores in a modality by a constant; AUROC unchanged
+obey,P3,lr,centered,main,16,nan,nan,nan,0.953757225433526,9,164,True,32,False,centering shifts all scores in a modality by a constant; AUROC unchanged
+obey,P3,lr,centered,main,17,nan,nan,nan,0.9364161849710982,9,164,True,32,False,centering shifts all scores in a modality by a constant; AUROC unchanged
+obey,P3,lr,centered,main,18,nan,nan,nan,0.9653179190751445,9,164,True,32,False,centering shifts all scores in a modality by a constant; AUROC unchanged
+obey,P3,lr,centered,main,19,nan,nan,nan,0.9653179190751445,9,164,True,32,False,centering shifts all scores in a modality by a constant; AUROC unchanged
+obey,P3,lr,centered,main,20,nan,nan,nan,0.953757225433526,9,164,True,32,False,centering shifts all scores in a modality by a constant; AUROC unchanged
+obey,P3,lr,centered,main,21,nan,nan,nan,0.9595375722543352,9,164,True,32,False,centering shifts all scores in a modality by a constant; AUROC unchanged
+obey,P3,lr,centered,main,22,nan,nan,nan,0.953757225433526,9,164,True,32,False,centering shifts all scores in a modality by a constant; AUROC unchanged
+obey,P3,lr,centered,main,23,nan,nan,nan,0.953757225433526,9,164,True,32,False,centering shifts all scores in a modality by a constant; AUROC unchanged
+obey,P3,lr,centered,main,24,nan,nan,nan,0.953757225433526,9,164,True,32,False,centering shifts all scores in a modality by a constant; AUROC unchanged
+obey,P3,lr,centered,main,25,nan,nan,nan,0.9421965317919075,9,164,True,32,False,centering shifts all scores in a modality by a constant; AUROC unchanged
+obey,P3,lr,centered,main,26,nan,nan,nan,0.930635838150289,9,164,True,32,False,centering shifts all scores in a modality by a constant; AUROC unchanged
+obey,P3,lr,centered,main,27,nan,nan,nan,0.9421965317919075,9,164,True,32,False,centering shifts all scores in a modality by a constant; AUROC unchanged
+obey,P3,lr,centered,main,28,nan,nan,nan,0.9479768786127167,9,164,True,32,False,centering shifts all scores in a modality by a constant; AUROC unchanged
+obey,P3,lr,centered,main,29,nan,nan,nan,0.9479768786127167,9,164,True,32,False,centering shifts all scores in a modality by a constant; AUROC unchanged
+obey,P3,lr,centered,main,30,nan,nan,nan,0.9479768786127167,9,164,True,32,False,centering shifts all scores in a modality by a constant; AUROC unchanged
+obey,P3,lr,centered,main,31,nan,nan,nan,0.9479768786127167,9,164,True,32,False,centering shifts all scores in a modality by a constant; AUROC unchanged
+obey,P3,lr,centered,main,32,nan,nan,nan,0.953757225433526,9,164,True,32,True,centering shifts all scores in a modality by a constant; AUROC unchanged
+obey,P3,lr,centered,main,33,nan,nan,nan,0.953757225433526,9,164,True,32,False,centering shifts all scores in a modality by a constant; AUROC unchanged
+obey,P3,lr,centered,main,34,nan,nan,nan,0.9421965317919075,9,164,True,32,False,centering shifts all scores in a modality by a constant; AUROC unchanged
+obey,P3,lr,centered,main,35,nan,nan,nan,0.9364161849710982,9,164,True,32,False,centering shifts all scores in a modality by a constant; AUROC unchanged
+obey,P3,lr,centered,main,36,nan,nan,nan,0.9595375722543352,9,164,True,32,False,centering shifts all scores in a modality by a constant; AUROC unchanged
+obey,P1,lr,raw,probe_evading,0,0.5,0.5,0.5,nan,18,40,True,31,False,
+obey,P1,lr,raw,probe_evading,1,0.6305555555555555,0.3845117845117845,0.7867253038863208,nan,18,40,True,31,False,
+obey,P1,lr,raw,probe_evading,2,0.65,0.40809904381332957,0.7782808337495838,nan,18,40,True,31,False,
+obey,P1,lr,raw,probe_evading,3,0.6361111111111111,0.3918726171023965,0.8065554758488761,nan,18,40,True,31,False,
+obey,P1,lr,raw,probe_evading,4,0.6166666666666667,0.3655241935483871,0.7693507639958911,nan,18,40,True,31,False,
+obey,P1,lr,raw,probe_evading,5,0.6125,0.3781484962406015,0.7554430103147024,nan,18,40,True,31,False,
+obey,P1,lr,raw,probe_evading,6,0.6680555555555555,0.45234765234765234,0.790278935460824,nan,18,40,True,31,False,
+obey,P1,lr,raw,probe_evading,7,0.6847222222222222,0.49237289562289566,0.8129436557231589,nan,18,40,True,31,False,
+obey,P1,lr,raw,probe_evading,8,0.65,0.4780545112781955,0.7913003663003662,nan,18,40,True,31,False,
+obey,P1,lr,raw,probe_evading,9,0.6930555555555555,0.4977496962172443,0.8387130098640363,nan,18,40,True,31,False,
+obey,P1,lr,raw,probe_evading,10,0.6583333333333333,0.4826026827909803,0.8023044045204288,nan,18,40,True,31,False,
+obey,P1,lr,raw,probe_evading,11,0.6791666666666667,0.4792855792855793,0.8238550420168066,nan,18,40,True,31,False,
+obey,P1,lr,raw,probe_evading,12,0.6888888888888889,0.5283816367456073,0.8152951388888888,nan,18,40,True,31,False,
+obey,P1,lr,raw,probe_evading,13,0.6666666666666666,0.5146715686274509,0.8041438087774294,nan,18,40,True,31,False,
+obey,P1,lr,raw,probe_evading,14,0.5944444444444444,0.43395901416122007,0.7725079365079365,nan,18,40,True,31,False,
+obey,P1,lr,raw,probe_evading,15,0.5555555555555556,0.36522513724662165,0.7681602822580645,nan,18,40,True,31,False,
+obey,P1,lr,raw,probe_evading,16,0.5888888888888889,0.41813203463203463,0.7946084943639291,nan,18,40,True,31,False,
+obey,P1,lr,raw,probe_evading,17,0.6625,0.5067992424242425,0.8242063492063492,nan,18,40,True,31,False,
+obey,P1,lr,raw,probe_evading,18,0.6861111111111111,0.5436919642857142,0.8244665658602149,nan,18,40,True,31,False,
+obey,P1,lr,raw,probe_evading,19,0.6958333333333333,0.5528140356265356,0.865828410311493,nan,18,40,True,31,False,
+obey,P1,lr,raw,probe_evading,20,0.6902777777777778,0.5421030517470146,0.8705460448642267,nan,18,40,True,31,False,
+obey,P1,lr,raw,probe_evading,21,0.7236111111111111,0.5833220108695653,0.8792071353436185,nan,18,40,True,31,False,
+obey,P1,lr,raw,probe_evading,22,0.6833333333333333,0.5385640806561859,0.8372164618535586,nan,18,40,True,31,False,
+obey,P1,lr,raw,probe_evading,23,0.7402777777777778,0.5996392601457257,0.8976232322346891,nan,18,40,True,31,False,
+obey,P1,lr,raw,probe_evading,24,0.7680555555555556,0.6236239495798319,0.9127014652014652,nan,18,40,True,31,False,
+obey,P1,lr,raw,probe_evading,25,0.7430555555555556,0.5815064606487756,0.9133708791208791,nan,18,40,True,31,False,
+obey,P1,lr,raw,probe_evading,26,0.7763888888888889,0.6173911131438221,0.9259856630824372,nan,18,40,True,31,False,
+obey,P1,lr,raw,probe_evading,27,0.7847222222222222,0.6393095975232199,0.9231182795698925,nan,18,40,True,31,False,
+obey,P1,lr,raw,probe_evading,28,0.7694444444444445,0.5995364700560484,0.9039032002961367,nan,18,40,True,31,False,
+obey,P1,lr,raw,probe_evading,29,0.7944444444444444,0.6419037356321838,0.9166964285714285,nan,18,40,True,31,False,
+obey,P1,lr,raw,probe_evading,30,0.8097222222222222,0.6646000704721634,0.9166702037351443,nan,18,40,True,31,False,
+obey,P1,lr,raw,probe_evading,31,0.8138888888888889,0.6764385227775321,0.9192373312961548,nan,18,40,True,31,True,
+obey,P1,lr,raw,probe_evading,32,0.8138888888888889,0.6843537975100455,0.916712648556876,nan,18,40,True,31,False,
+obey,P1,lr,raw,probe_evading,33,0.8,0.6386679159628378,0.9107242063492064,nan,18,40,True,31,False,
+obey,P1,lr,raw,probe_evading,34,0.7986111111111112,0.6466458333333333,0.9094123641304348,nan,18,40,True,31,False,
+obey,P1,lr,raw,probe_evading,35,0.8,0.6685940803382664,0.9031430288461538,nan,18,40,True,31,False,
+obey,P1,lr,raw,probe_evading,36,0.7652777777777777,0.6142024853801169,0.8801020408163265,nan,18,40,True,31,False,
+obey,P2,lr,raw,probe_evading,0,nan,nan,nan,nan,2,56,True,31,False,auroc omitted: class < 5
+obey,P2,lr,raw,probe_evading,1,nan,nan,nan,nan,2,56,True,31,False,auroc omitted: class < 5
+obey,P2,lr,raw,probe_evading,2,nan,nan,nan,nan,2,56,True,31,False,auroc omitted: class < 5
+obey,P2,lr,raw,probe_evading,3,nan,nan,nan,nan,2,56,True,31,False,auroc omitted: class < 5
+obey,P2,lr,raw,probe_evading,4,nan,nan,nan,nan,2,56,True,31,False,auroc omitted: class < 5
+obey,P2,lr,raw,probe_evading,5,nan,nan,nan,nan,2,56,True,31,False,auroc omitted: class < 5
+obey,P2,lr,raw,probe_evading,6,nan,nan,nan,nan,2,56,True,31,False,auroc omitted: class < 5
+obey,P2,lr,raw,probe_evading,7,nan,nan,nan,nan,2,56,True,31,False,auroc omitted: class < 5
+obey,P2,lr,raw,probe_evading,8,nan,nan,nan,nan,2,56,True,31,False,auroc omitted: class < 5
+obey,P2,lr,raw,probe_evading,9,nan,nan,nan,nan,2,56,True,31,False,auroc omitted: class < 5
+obey,P2,lr,raw,probe_evading,10,nan,nan,nan,nan,2,56,True,31,False,auroc omitted: class < 5
+obey,P2,lr,raw,probe_evading,11,nan,nan,nan,nan,2,56,True,31,False,auroc omitted: class < 5
+obey,P2,lr,raw,probe_evading,12,nan,nan,nan,nan,2,56,True,31,False,auroc omitted: class < 5
+obey,P2,lr,raw,probe_evading,13,nan,nan,nan,nan,2,56,True,31,False,auroc omitted: class < 5
+obey,P2,lr,raw,probe_evading,14,nan,nan,nan,nan,2,56,True,31,False,auroc omitted: class < 5
+obey,P2,lr,raw,probe_evading,15,nan,nan,nan,nan,2,56,True,31,False,auroc omitted: class < 5
+obey,P2,lr,raw,probe_evading,16,nan,nan,nan,nan,2,56,True,31,False,auroc omitted: class < 5
+obey,P2,lr,raw,probe_evading,17,nan,nan,nan,nan,2,56,True,31,False,auroc omitted: class < 5
+obey,P2,lr,raw,probe_evading,18,nan,nan,nan,nan,2,56,True,31,False,auroc omitted: class < 5
+obey,P2,lr,raw,probe_evading,19,nan,nan,nan,nan,2,56,True,31,False,auroc omitted: class < 5
+obey,P2,lr,raw,probe_evading,20,nan,nan,nan,nan,2,56,True,31,False,auroc omitted: class < 5
+obey,P2,lr,raw,probe_evading,21,nan,nan,nan,nan,2,56,True,31,False,auroc omitted: class < 5
+obey,P2,lr,raw,probe_evading,22,nan,nan,nan,nan,2,56,True,31,False,auroc omitted: class < 5
+obey,P2,lr,raw,probe_evading,23,nan,nan,nan,nan,2,56,True,31,False,auroc omitted: class < 5
+obey,P2,lr,raw,probe_evading,24,nan,nan,nan,nan,2,56,True,31,False,auroc omitted: class < 5
+obey,P2,lr,raw,probe_evading,25,nan,nan,nan,nan,2,56,True,31,False,auroc omitted: class < 5
+obey,P2,lr,raw,probe_evading,26,nan,nan,nan,nan,2,56,True,31,False,auroc omitted: class < 5
+obey,P2,lr,raw,probe_evading,27,nan,nan,nan,nan,2,56,True,31,False,auroc omitted: class < 5
+obey,P2,lr,raw,probe_evading,28,nan,nan,nan,nan,2,56,True,31,False,auroc omitted: class < 5
+obey,P2,lr,raw,probe_evading,29,nan,nan,nan,nan,2,56,True,31,False,auroc omitted: class < 5
+obey,P2,lr,raw,probe_evading,30,nan,nan,nan,nan,2,56,True,31,False,auroc omitted: class < 5
+obey,P2,lr,raw,probe_evading,31,nan,nan,nan,nan,2,56,True,31,True,auroc omitted: class < 5
+obey,P2,lr,raw,probe_evading,32,nan,nan,nan,nan,2,56,True,31,False,auroc omitted: class < 5
+obey,P2,lr,raw,probe_evading,33,nan,nan,nan,nan,2,56,True,31,False,auroc omitted: class < 5
+obey,P2,lr,raw,probe_evading,34,nan,nan,nan,nan,2,56,True,31,False,auroc omitted: class < 5
+obey,P2,lr,raw,probe_evading,35,nan,nan,nan,nan,2,56,True,31,False,auroc omitted: class < 5
+obey,P2,lr,raw,probe_evading,36,nan,nan,nan,nan,2,56,True,31,False,auroc omitted: class < 5
+obey,P1,dom,raw,main,0,0.5,0.5,0.5,0.5433526011560693,79,94,False,27,False,
+obey,P1,dom,raw,main,1,0.7483628391180871,0.6772777651337345,0.8343436754956853,0.6820809248554913,79,94,False,27,False,
+obey,P1,dom,raw,main,2,0.8004793996693905,0.72981426679313,0.8734784143874049,0.7225433526011561,79,94,False,27,False,
+obey,P1,dom,raw,main,3,0.778865340368991,0.7138790275648225,0.8577235052108858,0.7109826589595376,79,94,False,27,False,
+obey,P1,dom,raw,main,4,0.7861363347635023,0.7188110578858331,0.8634855100244535,0.7398843930635838,79,94,False,27,False,
+obey,P1,dom,raw,main,5,0.7858261832478443,0.7204196843431322,0.8631912813452316,0.7398843930635838,79,94,False,27,False,
+obey,P1,dom,raw,main,6,0.7642672998164327,0.685513309992899,0.8459097842261905,0.7283236994219653,79,94,False,27,False,
+obey,P1,dom,raw,main,7,0.7379839509440969,0.6538164946164947,0.8265761279611671,0.6763005780346821,79,94,False,27,False,
+obey,P1,dom,raw,main,8,0.7313914046268777,0.6448453676894668,0.8182387877818761,0.6820809248554913,79,94,False,27,False,
+obey,P1,dom,raw,main,9,0.7533846363554304,0.6757541049261505,0.8452112912542556,0.6994219653179191,79,94,False,27,False,
+obey,P1,dom,raw,main,10,0.7500746249491307,0.6791113399363139,0.8364199492332818,0.6936416184971098,79,94,False,27,False,
+obey,P1,dom,raw,main,11,0.7501181178622615,0.6739744945066208,0.8356208794074829,0.6878612716763006,79,94,False,27,False,
+obey,P1,dom,raw,main,12,0.7596398894010699,0.6774277534240302,0.8453415420633964,0.6936416184971098,79,94,False,27,False,
+obey,P1,dom,raw,main,13,0.7434493518346577,0.6557214424498042,0.8283975517011652,0.6763005780346821,79,94,False,27,False,
+obey,P1,dom,raw,main,14,0.7450471810412487,0.6690709124944231,0.8293520752002506,0.6820809248554913,79,94,False,27,False,
+obey,P1,dom,raw,main,15,0.7613605540590633,0.6903309289189017,0.8458845985391897,0.7167630057803468,79,94,False,27,False,
+obey,P1,dom,raw,main,16,0.7697431493902439,0.7014932695001289,0.8498587251170651,0.7398843930635838,79,94,False,27,False,
+obey,P1,dom,raw,main,17,0.8113860934556097,0.7400204029710128,0.8776334030958186,0.7514450867052023,79,94,False,27,False,
+obey,P1,dom,raw,main,18,0.8152699846379494,0.7490882780033947,0.874172541306476,0.7456647398843931,79,94,False,27,False,
+obey,P1,dom,raw,main,19,0.8296360448360751,0.7646657650600349,0.8879268499239487,0.7630057803468208,79,94,False,27,False,
+obey,P1,dom,raw,main,20,0.8422434763627341,0.7835459626850589,0.894216799658226,0.7514450867052023,79,94,False,27,False,
+obey,P1,dom,raw,main,21,0.8529269483178823,0.7844851529996629,0.9079346203428053,0.7167630057803468,79,94,False,27,False,
+obey,P1,dom,raw,main,22,0.8456198223235034,0.7795935102866317,0.8990995860192711,0.7745664739884393,79,94,False,27,False,
+obey,P1,dom,raw,main,23,0.8396964471994894,0.7648657877926289,0.8945425151311639,0.7514450867052023,79,94,False,27,False,
+obey,P1,dom,raw,main,24,0.8385212326800401,0.7681472174913815,0.8959730211399773,0.7514450867052023,79,94,False,27,False,
+obey,P1,dom,raw,main,25,0.8501803422551825,0.7831920579484511,0.8991833345341067,0.7456647398843931,79,94,False,27,False,
+obey,P1,dom,raw,main,26,0.8427983245331891,0.7761057741039868,0.898728441993385,0.7341040462427746,79,94,False,27,False,
+obey,P1,dom,raw,main,27,0.8525322284449147,0.7922003265191815,0.908815536313886,0.7398843930635838,79,94,False,27,True,
+obey,P1,dom,raw,main,28,0.8394653895946869,0.7800220956150333,0.9060971589049273,0.7225433526011561,79,94,False,27,False,
+obey,P1,dom,raw,main,29,0.8359280660353066,0.7729802057512365,0.9037867987831304,0.7283236994219653,79,94,False,27,False,
+obey,P1,dom,raw,main,30,0.8530882551684195,0.786717513671631,0.9163933617728353,0.7341040462427746,79,94,False,27,False,
+obey,P1,dom,raw,main,31,0.845715965996617,0.7757084380661111,0.9101523858300793,0.7398843930635838,79,94,False,27,False,
+obey,P1,dom,raw,main,32,0.8467889013599387,0.7740464751065925,0.9137291316237744,0.7283236994219653,79,94,False,27,False,
+obey,P1,dom,raw,main,33,0.8447832780240752,0.7807470192202091,0.9091966846070224,0.7398843930635838,79,94,False,27,False,
+obey,P1,dom,raw,main,34,0.8374655783995607,0.7733615991524324,0.9052523277036375,0.7341040462427746,79,94,False,27,False,
+obey,P1,dom,raw,main,35,0.8378858461114318,0.7769881298552533,0.9032140622782313,0.7283236994219653,79,94,False,27,False,
+obey,P1,dom,raw,main,36,0.8220924674149499,0.7563751269358594,0.8879789026793061,0.7398843930635838,79,94,False,27,False,
+obey,P1,dom,centered,main,0,nan,nan,nan,0.5433526011560693,79,94,False,27,False,centering shifts all scores in a modality by a constant; AUROC unchanged
+obey,P1,dom,centered,main,1,nan,nan,nan,0.6820809248554913,79,94,False,27,False,centering shifts all scores in a modality by a constant; AUROC unchanged
+obey,P1,dom,centered,main,2,nan,nan,nan,0.7225433526011561,79,94,False,27,False,centering shifts all scores in a modality by a constant; AUROC unchanged
+obey,P1,dom,centered,main,3,nan,nan,nan,0.7109826589595376,79,94,False,27,False,centering shifts all scores in a modality by a constant; AUROC unchanged
+obey,P1,dom,centered,main,4,nan,nan,nan,0.7398843930635838,79,94,False,27,False,centering shifts all scores in a modality by a constant; AUROC unchanged
+obey,P1,dom,centered,main,5,nan,nan,nan,0.7398843930635838,79,94,False,27,False,centering shifts all scores in a modality by a constant; AUROC unchanged
+obey,P1,dom,centered,main,6,nan,nan,nan,0.7283236994219653,79,94,False,27,False,centering shifts all scores in a modality by a constant; AUROC unchanged
+obey,P1,dom,centered,main,7,nan,nan,nan,0.6763005780346821,79,94,False,27,False,centering shifts all scores in a modality by a constant; AUROC unchanged
+obey,P1,dom,centered,main,8,nan,nan,nan,0.6820809248554913,79,94,False,27,False,centering shifts all scores in a modality by a constant; AUROC unchanged
+obey,P1,dom,centered,main,9,nan,nan,nan,0.6994219653179191,79,94,False,27,False,centering shifts all scores in a modality by a constant; AUROC unchanged
+obey,P1,dom,centered,main,10,nan,nan,nan,0.6936416184971098,79,94,False,27,False,centering shifts all scores in a modality by a constant; AUROC unchanged
+obey,P1,dom,centered,main,11,nan,nan,nan,0.6878612716763006,79,94,False,27,False,centering shifts all scores in a modality by a constant; AUROC unchanged
+obey,P1,dom,centered,main,12,nan,nan,nan,0.6936416184971098,79,94,False,27,False,centering shifts all scores in a modality by a constant; AUROC unchanged
+obey,P1,dom,centered,main,13,nan,nan,nan,0.6763005780346821,79,94,False,27,False,centering shifts all scores in a modality by a constant; AUROC unchanged
+obey,P1,dom,centered,main,14,nan,nan,nan,0.6820809248554913,79,94,False,27,False,centering shifts all scores in a modality by a constant; AUROC unchanged
+obey,P1,dom,centered,main,15,nan,nan,nan,0.7167630057803468,79,94,False,27,False,centering shifts all scores in a modality by a constant; AUROC unchanged
+obey,P1,dom,centered,main,16,nan,nan,nan,0.7398843930635838,79,94,False,27,False,centering shifts all scores in a modality by a constant; AUROC unchanged
+obey,P1,dom,centered,main,17,nan,nan,nan,0.7514450867052023,79,94,False,27,False,centering shifts all scores in a modality by a constant; AUROC unchanged
+obey,P1,dom,centered,main,18,nan,nan,nan,0.7456647398843931,79,94,False,27,False,centering shifts all scores in a modality by a constant; AUROC unchanged
+obey,P1,dom,centered,main,19,nan,nan,nan,0.7630057803468208,79,94,False,27,False,centering shifts all scores in a modality by a constant; AUROC unchanged
+obey,P1,dom,centered,main,20,nan,nan,nan,0.7514450867052023,79,94,False,27,False,centering shifts all scores in a modality by a constant; AUROC unchanged
+obey,P1,dom,centered,main,21,nan,nan,nan,0.7167630057803468,79,94,False,27,False,centering shifts all scores in a modality by a constant; AUROC unchanged
+obey,P1,dom,centered,main,22,nan,nan,nan,0.7745664739884393,79,94,False,27,False,centering shifts all scores in a modality by a constant; AUROC unchanged
+obey,P1,dom,centered,main,23,nan,nan,nan,0.7514450867052023,79,94,False,27,False,centering shifts all scores in a modality by a constant; AUROC unchanged
+obey,P1,dom,centered,main,24,nan,nan,nan,0.7514450867052023,79,94,False,27,False,centering shifts all scores in a modality by a constant; AUROC unchanged
+obey,P1,dom,centered,main,25,nan,nan,nan,0.7456647398843931,79,94,False,27,False,centering shifts all scores in a modality by a constant; AUROC unchanged
+obey,P1,dom,centered,main,26,nan,nan,nan,0.7341040462427746,79,94,False,27,False,centering shifts all scores in a modality by a constant; AUROC unchanged
+obey,P1,dom,centered,main,27,nan,nan,nan,0.7398843930635838,79,94,False,27,True,centering shifts all scores in a modality by a constant; AUROC unchanged
+obey,P1,dom,centered,main,28,nan,nan,nan,0.7225433526011561,79,94,False,27,False,centering shifts all scores in a modality by a constant; AUROC unchanged
+obey,P1,dom,centered,main,29,nan,nan,nan,0.7283236994219653,79,94,False,27,False,centering shifts all scores in a modality by a constant; AUROC unchanged
+obey,P1,dom,centered,main,30,nan,nan,nan,0.7341040462427746,79,94,False,27,False,centering shifts all scores in a modality by a constant; AUROC unchanged
+obey,P1,dom,centered,main,31,nan,nan,nan,0.7398843930635838,79,94,False,27,False,centering shifts all scores in a modality by a constant; AUROC unchanged
+obey,P1,dom,centered,main,32,nan,nan,nan,0.7283236994219653,79,94,False,27,False,centering shifts all scores in a modality by a constant; AUROC unchanged
+obey,P1,dom,centered,main,33,nan,nan,nan,0.7398843930635838,79,94,False,27,False,centering shifts all scores in a modality by a constant; AUROC unchanged
+obey,P1,dom,centered,main,34,nan,nan,nan,0.7341040462427746,79,94,False,27,False,centering shifts all scores in a modality by a constant; AUROC unchanged
+obey,P1,dom,centered,main,35,nan,nan,nan,0.7283236994219653,79,94,False,27,False,centering shifts all scores in a modality by a constant; AUROC unchanged
+obey,P1,dom,centered,main,36,nan,nan,nan,0.7398843930635838,79,94,False,27,False,centering shifts all scores in a modality by a constant; AUROC unchanged
+obey,P2,dom,raw,main,0,0.5,0.5,0.5,0.9479768786127167,9,164,True,27,False,
+obey,P2,dom,raw,main,1,0.5240353172007849,0.32122489914284413,0.7001321664809929,0.05202312138728324,9,164,True,27,False,
+obey,P2,dom,raw,main,2,0.2898544800523218,0.10181630461042226,0.5074718729731078,0.05202312138728324,9,164,True,27,False,
+obey,P2,dom,raw,main,3,0.24905984303466316,0.11825454015639059,0.4744353063288312,0.05202312138728324,9,164,True,27,False,
+obey,P2,dom,raw,main,4,0.21108567691301502,0.05164410598843954,0.48451721390837765,0.05202312138728324,9,164,True,27,False,
+obey,P2,dom,raw,main,5,0.1783981905384783,0.06563554204838433,0.38668582219851094,0.05202312138728324,9,164,True,27,False,
+obey,P2,dom,raw,main,6,0.32538287551776757,0.13330610243535934,0.6849507434507034,0.05202312138728324,9,164,True,27,False,
+obey,P2,dom,raw,main,7,0.4248964464791803,0.22475735722810974,0.8000814084888319,0.5895953757225434,9,164,True,27,False,
+obey,P2,dom,raw,main,8,0.4027414432090691,0.20036272173099795,0.7820402806277252,0.6416184971098265,9,164,True,27,False,
+obey,P2,dom,raw,main,9,0.4318522454763462,0.22018843055949505,0.7899418780193234,0.3063583815028902,9,164,True,27,False,
+obey,P2,dom,raw,main,10,0.45047144102899495,0.2158196848167204,0.8131897728838613,0.27167630057803466,9,164,True,27,False,
+obey,P2,dom,raw,main,11,0.4919201002834096,0.26522997090157335,0.7871473755322633,0.06936416184971098,9,164,True,27,False,
+obey,P2,dom,raw,main,12,0.5266718443427076,0.34066440844014373,0.8479132321219127,0.05202312138728324,9,164,True,27,False,
+obey,P2,dom,raw,main,13,0.5296898844560716,0.33081382601539133,0.8851341721210986,0.06358381502890173,9,164,True,27,False,
+obey,P2,dom,raw,main,14,0.5351741334205363,0.3530890587269791,0.8742327834511652,0.05202312138728324,9,164,True,27,False,
+obey,P2,dom,raw,main,15,0.6218525179856115,0.487069096530762,0.867254841789416,0.05202312138728324,9,164,True,27,False,
+obey,P2,dom,raw,main,16,0.8315143339873554,0.7114337253536037,0.973757042365665,0.05202312138728324,9,164,True,27,False,
+obey,P2,dom,raw,main,17,0.906031992587748,0.7904630280123203,1.0,0.05202312138728324,9,164,True,27,False,
+obey,P2,dom,raw,main,18,0.9370503597122302,0.8645243425243426,1.0,0.05202312138728324,9,164,True,27,False,
+obey,P2,dom,raw,main,19,0.9318045563549159,0.8436477714742555,1.0,0.05202312138728324,9,164,True,27,False,
+obey,P2,dom,raw,main,20,0.9606564748201439,0.8976228138184735,1.0,0.05202312138728324,9,164,True,27,False,
+obey,P2,dom,raw,main,21,0.9239358513189447,0.8086761865548178,1.0,0.05202312138728324,9,164,True,27,False,
+obey,P2,dom,raw,main,22,0.923935851318945,0.8158661557622003,1.0,0.08670520231213873,9,164,True,27,False,
+obey,P2,dom,raw,main,23,0.9318045563549159,0.830845514842864,1.0,0.26011560693641617,9,164,True,27,False,
+obey,P2,dom,raw,main,24,0.9422961630695444,0.8565951611413796,1.0,0.20809248554913296,9,164,True,27,False,
+obey,P2,dom,raw,main,25,0.9501648681055157,0.8706882071282388,1.0,0.44508670520231214,9,164,True,27,False,
+obey,P2,dom,raw,main,26,0.9606564748201439,0.8918638446775786,1.0,0.5317919075144508,9,164,True,27,False,
+obey,P2,dom,raw,main,27,0.9554106714628297,0.8794771424736023,1.0,0.6011560693641619,9,164,True,27,True,
+obey,P2,dom,raw,main,28,0.9415603880531938,0.8676319005561047,1.0,0.6936416184971098,9,164,True,27,False,
+obey,P2,dom,raw,main,29,0.9463497383911053,0.866329397942313,1.0,0.7630057803468208,9,164,True,27,False,
+obey,P2,dom,raw,main,30,0.9363145846958797,0.854475321305245,1.0,0.7803468208092486,9,164,True,27,False,
+obey,P2,dom,raw,main,31,0.9241129823413995,0.8502948016821772,1.0,0.791907514450867,9,164,True,27,False,
+obey,P2,dom,raw,main,32,0.9341481360366253,0.862246539375485,1.0,0.7976878612716763,9,164,True,27,False,
+obey,P2,dom,raw,main,33,0.9293587856987136,0.8596168229454727,1.0,0.815028901734104,9,164,True,27,False,
+obey,P2,dom,raw,main,34,0.911114290385873,0.7921750439306157,1.0,0.7456647398843931,9,164,True,27,False,
+obey,P2,dom,raw,main,35,0.920692991061696,0.8270386029868925,1.0,0.7803468208092486,9,164,True,27,False,
+obey,P2,dom,raw,main,36,0.9298152387181164,0.8654571168369384,0.9885974025974027,0.8092485549132948,9,164,True,27,False,
+obey,P2,dom,centered,main,0,nan,nan,nan,0.9479768786127167,9,164,True,27,False,centering shifts all scores in a modality by a constant; AUROC unchanged
+obey,P2,dom,centered,main,1,nan,nan,nan,0.6647398843930635,9,164,True,27,False,centering shifts all scores in a modality by a constant; AUROC unchanged
+obey,P2,dom,centered,main,2,nan,nan,nan,0.630057803468208,9,164,True,27,False,centering shifts all scores in a modality by a constant; AUROC unchanged
+obey,P2,dom,centered,main,3,nan,nan,nan,0.6878612716763006,9,164,True,27,False,centering shifts all scores in a modality by a constant; AUROC unchanged
+obey,P2,dom,centered,main,4,nan,nan,nan,0.7052023121387283,9,164,True,27,False,centering shifts all scores in a modality by a constant; AUROC unchanged
+obey,P2,dom,centered,main,5,nan,nan,nan,0.6820809248554913,9,164,True,27,False,centering shifts all scores in a modality by a constant; AUROC unchanged
+obey,P2,dom,centered,main,6,nan,nan,nan,0.7514450867052023,9,164,True,27,False,centering shifts all scores in a modality by a constant; AUROC unchanged
+obey,P2,dom,centered,main,7,nan,nan,nan,0.7687861271676301,9,164,True,27,False,centering shifts all scores in a modality by a constant; AUROC unchanged
+obey,P2,dom,centered,main,8,nan,nan,nan,0.7687861271676301,9,164,True,27,False,centering shifts all scores in a modality by a constant; AUROC unchanged
+obey,P2,dom,centered,main,9,nan,nan,nan,0.8034682080924855,9,164,True,27,False,centering shifts all scores in a modality by a constant; AUROC unchanged
+obey,P2,dom,centered,main,10,nan,nan,nan,0.815028901734104,9,164,True,27,False,centering shifts all scores in a modality by a constant; AUROC unchanged
+obey,P2,dom,centered,main,11,nan,nan,nan,0.815028901734104,9,164,True,27,False,centering shifts all scores in a modality by a constant; AUROC unchanged
+obey,P2,dom,centered,main,12,nan,nan,nan,0.8092485549132948,9,164,True,27,False,centering shifts all scores in a modality by a constant; AUROC unchanged
+obey,P2,dom,centered,main,13,nan,nan,nan,0.7976878612716763,9,164,True,27,False,centering shifts all scores in a modality by a constant; AUROC unchanged
+obey,P2,dom,centered,main,14,nan,nan,nan,0.7976878612716763,9,164,True,27,False,centering shifts all scores in a modality by a constant; AUROC unchanged
+obey,P2,dom,centered,main,15,nan,nan,nan,0.7861271676300579,9,164,True,27,False,centering shifts all scores in a modality by a constant; AUROC unchanged
+obey,P2,dom,centered,main,16,nan,nan,nan,0.7803468208092486,9,164,True,27,False,centering shifts all scores in a modality by a constant; AUROC unchanged
+obey,P2,dom,centered,main,17,nan,nan,nan,0.7109826589595376,9,164,True,27,False,centering shifts all scores in a modality by a constant; AUROC unchanged
+obey,P2,dom,centered,main,18,nan,nan,nan,0.6878612716763006,9,164,True,27,False,centering shifts all scores in a modality by a constant; AUROC unchanged
+obey,P2,dom,centered,main,19,nan,nan,nan,0.6878612716763006,9,164,True,27,False,centering shifts all scores in a modality by a constant; AUROC unchanged
+obey,P2,dom,centered,main,20,nan,nan,nan,0.6763005780346821,9,164,True,27,False,centering shifts all scores in a modality by a constant; AUROC unchanged
+obey,P2,dom,centered,main,21,nan,nan,nan,0.6358381502890174,9,164,True,27,False,centering shifts all scores in a modality by a constant; AUROC unchanged
+obey,P2,dom,centered,main,22,nan,nan,nan,0.6589595375722543,9,164,True,27,False,centering shifts all scores in a modality by a constant; AUROC unchanged
+obey,P2,dom,centered,main,23,nan,nan,nan,0.6763005780346821,9,164,True,27,False,centering shifts all scores in a modality by a constant; AUROC unchanged
+obey,P2,dom,centered,main,24,nan,nan,nan,0.6589595375722543,9,164,True,27,False,centering shifts all scores in a modality by a constant; AUROC unchanged
+obey,P2,dom,centered,main,25,nan,nan,nan,0.6705202312138728,9,164,True,27,False,centering shifts all scores in a modality by a constant; AUROC unchanged
+obey,P2,dom,centered,main,26,nan,nan,nan,0.6242774566473989,9,164,True,27,False,centering shifts all scores in a modality by a constant; AUROC unchanged
+obey,P2,dom,centered,main,27,nan,nan,nan,0.6358381502890174,9,164,True,27,True,centering shifts all scores in a modality by a constant; AUROC unchanged
+obey,P2,dom,centered,main,28,nan,nan,nan,0.6358381502890174,9,164,True,27,False,centering shifts all scores in a modality by a constant; AUROC unchanged
+obey,P2,dom,centered,main,29,nan,nan,nan,0.6589595375722543,9,164,True,27,False,centering shifts all scores in a modality by a constant; AUROC unchanged
+obey,P2,dom,centered,main,30,nan,nan,nan,0.6589595375722543,9,164,True,27,False,centering shifts all scores in a modality by a constant; AUROC unchanged
+obey,P2,dom,centered,main,31,nan,nan,nan,0.6705202312138728,9,164,True,27,False,centering shifts all scores in a modality by a constant; AUROC unchanged
+obey,P2,dom,centered,main,32,nan,nan,nan,0.6705202312138728,9,164,True,27,False,centering shifts all scores in a modality by a constant; AUROC unchanged
+obey,P2,dom,centered,main,33,nan,nan,nan,0.6589595375722543,9,164,True,27,False,centering shifts all scores in a modality by a constant; AUROC unchanged
+obey,P2,dom,centered,main,34,nan,nan,nan,0.6184971098265896,9,164,True,27,False,centering shifts all scores in a modality by a constant; AUROC unchanged
+obey,P2,dom,centered,main,35,nan,nan,nan,0.5953757225433526,9,164,True,27,False,centering shifts all scores in a modality by a constant; AUROC unchanged
+obey,P2,dom,centered,main,36,nan,nan,nan,0.6011560693641619,9,164,True,27,False,centering shifts all scores in a modality by a constant; AUROC unchanged
+obey,P3,dom,raw,main,0,0.5,0.5,0.5,0.9479768786127167,9,164,True,26,False,
+obey,P3,dom,raw,main,1,0.5178152932199696,0.3208343121788475,0.7489109660043569,0.7514450867052023,9,164,True,26,False,
+obey,P3,dom,raw,main,2,0.5920945062132114,0.3693623815448872,0.7939308995843934,0.7861271676300579,9,164,True,26,False,
+obey,P3,dom,raw,main,3,0.5847435687813386,0.3725123285005677,0.814163456442868,0.7456647398843931,9,164,True,26,False,
+obey,P3,dom,raw,main,4,0.6202719642467844,0.46177464303353,0.8265222111955036,0.7456647398843931,9,164,True,26,False,
+obey,P3,dom,raw,main,5,0.6076752234575976,0.39956818836891733,0.8367213652462099,0.7398843930635838,9,164,True,26,False,
+obey,P3,dom,raw,main,6,0.44785535208197075,0.21858608093639942,0.7309781357512635,0.7514450867052023,9,164,True,26,False,
+obey,P3,dom,raw,main,7,0.5832515805537387,0.38903426322668044,0.8800023141873237,0.7687861271676301,9,164,True,26,False,
+obey,P3,dom,raw,main,8,0.6509701329845213,0.49181851903860974,0.8788167211328974,0.7687861271676301,9,164,True,26,False,
+obey,P3,dom,raw,main,9,0.66527686941356,0.4844884801436984,0.8873150332856944,0.7687861271676301,9,164,True,26,False,
+obey,P3,dom,raw,main,10,0.6180442010028341,0.428972651459056,0.9197923764100233,0.7687861271676301,9,164,True,26,False,
+obey,P3,dom,raw,main,11,0.6247206780030522,0.44729409691252464,0.9147184185725054,0.7687861271676301,9,164,True,26,False,
+obey,P3,dom,raw,main,12,0.6533545890560278,0.49371573245550215,0.9113398415393321,0.7687861271676301,9,164,True,26,False,
+obey,P3,dom,raw,main,13,0.6407374100719424,0.4666725835379347,0.921828624772934,0.7745664739884393,9,164,True,26,False,
+obey,P3,dom,raw,main,14,0.6770015805537387,0.5212492852443648,0.9336615358674182,0.7687861271676301,9,164,True,26,False,
+obey,P3,dom,raw,main,15,0.7368718661434489,0.5866401908580682,0.9361276851038923,0.7687861271676301,9,164,True,26,False,
+obey,P3,dom,raw,main,16,0.761213756267713,0.6014314020576179,0.9410063440734597,0.7861271676300579,9,164,True,26,False,
+obey,P3,dom,raw,main,17,0.8532946370176586,0.723126454912492,0.9892228212039533,0.8901734104046243,9,164,True,26,False,
+obey,P3,dom,raw,main,18,0.9213129496402878,0.8066997641783452,1.0,0.9075144508670521,9,164,True,26,False,
+obey,P3,dom,raw,main,19,0.9081984412470024,0.7829884694753791,1.0,0.8959537572254336,9,164,True,26,False,
+obey,P3,dom,raw,main,20,0.9239358513189447,0.8322700486098913,1.0,0.930635838150289,9,164,True,26,False,
+obey,P3,dom,raw,main,21,0.9318045563549159,0.8354186907912264,1.0,0.9075144508670521,9,164,True,26,False,
+obey,P3,dom,raw,main,22,0.9239358513189447,0.8195324311278002,1.0,0.9190751445086706,9,164,True,26,False,
+obey,P3,dom,raw,main,23,0.9344274580335733,0.8379849291040753,1.0,0.9075144508670521,9,164,True,26,False,
+obey,P3,dom,raw,main,24,0.9422961630695444,0.8545384883315919,1.0,0.9248554913294798,9,164,True,26,False,
+obey,P3,dom,raw,main,25,0.9501648681055157,0.8714934333189912,1.0,0.9075144508670521,9,164,True,26,False,
+obey,P3,dom,raw,main,26,0.9606564748201439,0.8933484456841216,1.0,0.9132947976878613,9,164,True,26,True,
+obey,P3,dom,raw,main,27,0.9501648681055157,0.8683159350109814,1.0,0.9075144508670521,9,164,True,26,False,
+obey,P3,dom,raw,main,28,0.9415603880531938,0.8653121960708033,1.0,0.8959537572254336,9,164,True,26,False,
+obey,P3,dom,raw,main,29,0.9267358840200567,0.8517477620696834,1.0,0.8959537572254336,9,164,True,26,False,
+obey,P3,dom,raw,main,30,0.9341481360366253,0.862544854481774,1.0,0.8959537572254336,9,164,True,26,False,
+obey,P3,dom,raw,main,31,0.9289023326793111,0.8522642094946122,1.0,0.8901734104046243,9,164,True,26,False,
+obey,P3,dom,raw,main,32,0.9193236320034881,0.8484820550639134,1.0,0.8959537572254336,9,164,True,26,False,
+obey,P3,dom,raw,main,33,0.9066655766296053,0.8370185636978805,1.0,0.8901734104046243,9,164,True,26,False,
+obey,P3,dom,raw,main,34,0.8818059189012426,0.7942101302779595,1.0,0.8959537572254336,9,164,True,26,False,
+obey,P3,dom,raw,main,35,0.8739372138652713,0.7853528791031025,1.0,0.884393063583815,9,164,True,26,False,
+obey,P3,dom,raw,main,36,0.8410317200784827,0.7051701402396102,1.0,0.884393063583815,9,164,True,26,False,
+obey,P3,dom,centered,main,0,nan,nan,nan,0.9479768786127167,9,164,True,26,False,centering shifts all scores in a modality by a constant; AUROC unchanged
+obey,P3,dom,centered,main,1,nan,nan,nan,0.7514450867052023,9,164,True,26,False,centering shifts all scores in a modality by a constant; AUROC unchanged
+obey,P3,dom,centered,main,2,nan,nan,nan,0.7861271676300579,9,164,True,26,False,centering shifts all scores in a modality by a constant; AUROC unchanged
+obey,P3,dom,centered,main,3,nan,nan,nan,0.7456647398843931,9,164,True,26,False,centering shifts all scores in a modality by a constant; AUROC unchanged
+obey,P3,dom,centered,main,4,nan,nan,nan,0.7456647398843931,9,164,True,26,False,centering shifts all scores in a modality by a constant; AUROC unchanged
+obey,P3,dom,centered,main,5,nan,nan,nan,0.7398843930635838,9,164,True,26,False,centering shifts all scores in a modality by a constant; AUROC unchanged
+obey,P3,dom,centered,main,6,nan,nan,nan,0.7514450867052023,9,164,True,26,False,centering shifts all scores in a modality by a constant; AUROC unchanged
+obey,P3,dom,centered,main,7,nan,nan,nan,0.7687861271676301,9,164,True,26,False,centering shifts all scores in a modality by a constant; AUROC unchanged
+obey,P3,dom,centered,main,8,nan,nan,nan,0.7687861271676301,9,164,True,26,False,centering shifts all scores in a modality by a constant; AUROC unchanged
+obey,P3,dom,centered,main,9,nan,nan,nan,0.7687861271676301,9,164,True,26,False,centering shifts all scores in a modality by a constant; AUROC unchanged
+obey,P3,dom,centered,main,10,nan,nan,nan,0.7687861271676301,9,164,True,26,False,centering shifts all scores in a modality by a constant; AUROC unchanged
+obey,P3,dom,centered,main,11,nan,nan,nan,0.7687861271676301,9,164,True,26,False,centering shifts all scores in a modality by a constant; AUROC unchanged
+obey,P3,dom,centered,main,12,nan,nan,nan,0.7687861271676301,9,164,True,26,False,centering shifts all scores in a modality by a constant; AUROC unchanged
+obey,P3,dom,centered,main,13,nan,nan,nan,0.7745664739884393,9,164,True,26,False,centering shifts all scores in a modality by a constant; AUROC unchanged
+obey,P3,dom,centered,main,14,nan,nan,nan,0.7687861271676301,9,164,True,26,False,centering shifts all scores in a modality by a constant; AUROC unchanged
+obey,P3,dom,centered,main,15,nan,nan,nan,0.7687861271676301,9,164,True,26,False,centering shifts all scores in a modality by a constant; AUROC unchanged
+obey,P3,dom,centered,main,16,nan,nan,nan,0.7861271676300579,9,164,True,26,False,centering shifts all scores in a modality by a constant; AUROC unchanged
+obey,P3,dom,centered,main,17,nan,nan,nan,0.8901734104046243,9,164,True,26,False,centering shifts all scores in a modality by a constant; AUROC unchanged
+obey,P3,dom,centered,main,18,nan,nan,nan,0.9075144508670521,9,164,True,26,False,centering shifts all scores in a modality by a constant; AUROC unchanged
+obey,P3,dom,centered,main,19,nan,nan,nan,0.8959537572254336,9,164,True,26,False,centering shifts all scores in a modality by a constant; AUROC unchanged
+obey,P3,dom,centered,main,20,nan,nan,nan,0.930635838150289,9,164,True,26,False,centering shifts all scores in a modality by a constant; AUROC unchanged
+obey,P3,dom,centered,main,21,nan,nan,nan,0.9075144508670521,9,164,True,26,False,centering shifts all scores in a modality by a constant; AUROC unchanged
+obey,P3,dom,centered,main,22,nan,nan,nan,0.9190751445086706,9,164,True,26,False,centering shifts all scores in a modality by a constant; AUROC unchanged
+obey,P3,dom,centered,main,23,nan,nan,nan,0.9075144508670521,9,164,True,26,False,centering shifts all scores in a modality by a constant; AUROC unchanged
+obey,P3,dom,centered,main,24,nan,nan,nan,0.9248554913294798,9,164,True,26,False,centering shifts all scores in a modality by a constant; AUROC unchanged
+obey,P3,dom,centered,main,25,nan,nan,nan,0.9075144508670521,9,164,True,26,False,centering shifts all scores in a modality by a constant; AUROC unchanged
+obey,P3,dom,centered,main,26,nan,nan,nan,0.9132947976878613,9,164,True,26,True,centering shifts all scores in a modality by a constant; AUROC unchanged
+obey,P3,dom,centered,main,27,nan,nan,nan,0.9075144508670521,9,164,True,26,False,centering shifts all scores in a modality by a constant; AUROC unchanged
+obey,P3,dom,centered,main,28,nan,nan,nan,0.8959537572254336,9,164,True,26,False,centering shifts all scores in a modality by a constant; AUROC unchanged
+obey,P3,dom,centered,main,29,nan,nan,nan,0.8959537572254336,9,164,True,26,False,centering shifts all scores in a modality by a constant; AUROC unchanged
+obey,P3,dom,centered,main,30,nan,nan,nan,0.8959537572254336,9,164,True,26,False,centering shifts all scores in a modality by a constant; AUROC unchanged
+obey,P3,dom,centered,main,31,nan,nan,nan,0.8901734104046243,9,164,True,26,False,centering shifts all scores in a modality by a constant; AUROC unchanged
+obey,P3,dom,centered,main,32,nan,nan,nan,0.8959537572254336,9,164,True,26,False,centering shifts all scores in a modality by a constant; AUROC unchanged
+obey,P3,dom,centered,main,33,nan,nan,nan,0.8901734104046243,9,164,True,26,False,centering shifts all scores in a modality by a constant; AUROC unchanged
+obey,P3,dom,centered,main,34,nan,nan,nan,0.8959537572254336,9,164,True,26,False,centering shifts all scores in a modality by a constant; AUROC unchanged
+obey,P3,dom,centered,main,35,nan,nan,nan,0.884393063583815,9,164,True,26,False,centering shifts all scores in a modality by a constant; AUROC unchanged
+obey,P3,dom,centered,main,36,nan,nan,nan,0.884393063583815,9,164,True,26,False,centering shifts all scores in a modality by a constant; AUROC unchanged
+obey,P1,dom,raw,probe_evading,0,0.5,0.5,0.5,nan,18,40,True,27,False,
+obey,P1,dom,raw,probe_evading,1,0.7152777777777778,0.5207951254826255,0.8611163324979115,nan,18,40,True,27,False,
+obey,P1,dom,raw,probe_evading,2,0.6777777777777778,0.46769332039911304,0.8237620252667922,nan,18,40,True,27,False,
+obey,P1,dom,raw,probe_evading,3,0.6861111111111111,0.46222606568832986,0.832324016563147,nan,18,40,True,27,False,
+obey,P1,dom,raw,probe_evading,4,0.7027777777777777,0.48587713675213673,0.8472252415458937,nan,18,40,True,27,False,
+obey,P1,dom,raw,probe_evading,5,0.6958333333333333,0.4814074074074074,0.8400104250200481,nan,18,40,True,27,False,
+obey,P1,dom,raw,probe_evading,6,0.6902777777777778,0.46504260312615614,0.8409935897435897,nan,18,40,True,27,False,
+obey,P1,dom,raw,probe_evading,7,0.5902777777777778,0.39799629281537174,0.7379074279379157,nan,18,40,True,27,False,
+obey,P1,dom,raw,probe_evading,8,0.5958333333333333,0.3871606691919192,0.7548836485813838,nan,18,40,True,27,False,
+obey,P1,dom,raw,probe_evading,9,0.6458333333333334,0.43140250206782466,0.8070823559534822,nan,18,40,True,27,False,
+obey,P1,dom,raw,probe_evading,10,0.6388888888888888,0.42225652106806605,0.7984272068511198,nan,18,40,True,27,False,
+obey,P1,dom,raw,probe_evading,11,0.6430555555555556,0.4368091467356173,0.8048108413325804,nan,18,40,True,27,False,
+obey,P1,dom,raw,probe_evading,12,0.6166666666666667,0.3820227811653117,0.7849841318591319,nan,18,40,True,27,False,
+obey,P1,dom,raw,probe_evading,13,0.6361111111111111,0.4061814692982456,0.8042960662525879,nan,18,40,True,27,False,
+obey,P1,dom,raw,probe_evading,14,0.6458333333333334,0.4229530087897228,0.8094638991960421,nan,18,40,True,27,False,
+obey,P1,dom,raw,probe_evading,15,0.6819444444444445,0.47949400627668876,0.8305037593984962,nan,18,40,True,27,False,
+obey,P1,dom,raw,probe_evading,16,0.7194444444444444,0.5361682435211846,0.8605826465201466,nan,18,40,True,27,False,
+obey,P1,dom,raw,probe_evading,17,0.7333333333333333,0.5484274860839476,0.8717681088964511,nan,18,40,True,27,False,
+obey,P1,dom,raw,probe_evading,18,0.7458333333333333,0.5643026315789474,0.8789703836215463,nan,18,40,True,27,False,
+obey,P1,dom,raw,probe_evading,19,0.7472222222222222,0.5760191745389114,0.8785026041666666,nan,18,40,True,27,False,
+obey,P1,dom,raw,probe_evading,20,0.7347222222222223,0.5746345285149633,0.8828638980263157,nan,18,40,True,27,False,
+obey,P1,dom,raw,probe_evading,21,0.7416666666666667,0.5911472371967654,0.9,nan,18,40,True,27,False,
+obey,P1,dom,raw,probe_evading,22,0.7611111111111111,0.644310776942356,0.8964147161515582,nan,18,40,True,27,False,
+obey,P1,dom,raw,probe_evading,23,0.7597222222222222,0.6395457848837209,0.8901132404181185,nan,18,40,True,27,False,
+obey,P1,dom,raw,probe_evading,24,0.7958333333333333,0.6715095514950166,0.9045983355978261,nan,18,40,True,27,False,
+obey,P1,dom,raw,probe_evading,25,0.7944444444444444,0.6730801551389787,0.9023300438596491,nan,18,40,True,27,False,
+obey,P1,dom,raw,probe_evading,26,0.7986111111111112,0.6754453656462585,0.9090938153917694,nan,18,40,True,27,False,
+obey,P1,dom,raw,probe_evading,27,0.7888888888888889,0.6591423872180451,0.9091055718475073,nan,18,40,True,27,True,
+obey,P1,dom,raw,probe_evading,28,0.775,0.6313104448742746,0.9011177248677249,nan,18,40,True,27,False,
+obey,P1,dom,raw,probe_evading,29,0.7625,0.6192465670139242,0.8907096555727554,nan,18,40,True,27,False,
+obey,P1,dom,raw,probe_evading,30,0.7833333333333333,0.6546065922381712,0.9007401315789474,nan,18,40,True,27,False,
+obey,P1,dom,raw,probe_evading,31,0.7763888888888889,0.6450287202380952,0.8960633213859021,nan,18,40,True,27,False,
+obey,P1,dom,raw,probe_evading,32,0.7694444444444445,0.6410484307359308,0.8931357758620689,nan,18,40,True,27,False,
+obey,P1,dom,raw,probe_evading,33,0.7875,0.6614821199612222,0.9050217834631072,nan,18,40,True,27,False,
+obey,P1,dom,raw,probe_evading,34,0.8083333333333333,0.6682476441241685,0.9153561827956989,nan,18,40,True,27,False,
+obey,P1,dom,raw,probe_evading,35,0.8041666666666667,0.6640857890857891,0.9111111111111111,nan,18,40,True,27,False,
+obey,P1,dom,raw,probe_evading,36,0.7986111111111112,0.6747002164502165,0.9135492035243319,nan,18,40,True,27,False,
+obey,P2,dom,raw,probe_evading,0,nan,nan,nan,nan,2,56,True,27,False,auroc omitted: class < 5
+obey,P2,dom,raw,probe_evading,1,nan,nan,nan,nan,2,56,True,27,False,auroc omitted: class < 5
+obey,P2,dom,raw,probe_evading,2,nan,nan,nan,nan,2,56,True,27,False,auroc omitted: class < 5
+obey,P2,dom,raw,probe_evading,3,nan,nan,nan,nan,2,56,True,27,False,auroc omitted: class < 5
+obey,P2,dom,raw,probe_evading,4,nan,nan,nan,nan,2,56,True,27,False,auroc omitted: class < 5
+obey,P2,dom,raw,probe_evading,5,nan,nan,nan,nan,2,56,True,27,False,auroc omitted: class < 5
+obey,P2,dom,raw,probe_evading,6,nan,nan,nan,nan,2,56,True,27,False,auroc omitted: class < 5
+obey,P2,dom,raw,probe_evading,7,nan,nan,nan,nan,2,56,True,27,False,auroc omitted: class < 5
+obey,P2,dom,raw,probe_evading,8,nan,nan,nan,nan,2,56,True,27,False,auroc omitted: class < 5
+obey,P2,dom,raw,probe_evading,9,nan,nan,nan,nan,2,56,True,27,False,auroc omitted: class < 5
+obey,P2,dom,raw,probe_evading,10,nan,nan,nan,nan,2,56,True,27,False,auroc omitted: class < 5
+obey,P2,dom,raw,probe_evading,11,nan,nan,nan,nan,2,56,True,27,False,auroc omitted: class < 5
+obey,P2,dom,raw,probe_evading,12,nan,nan,nan,nan,2,56,True,27,False,auroc omitted: class < 5
+obey,P2,dom,raw,probe_evading,13,nan,nan,nan,nan,2,56,True,27,False,auroc omitted: class < 5
+obey,P2,dom,raw,probe_evading,14,nan,nan,nan,nan,2,56,True,27,False,auroc omitted: class < 5
+obey,P2,dom,raw,probe_evading,15,nan,nan,nan,nan,2,56,True,27,False,auroc omitted: class < 5
+obey,P2,dom,raw,probe_evading,16,nan,nan,nan,nan,2,56,True,27,False,auroc omitted: class < 5
+obey,P2,dom,raw,probe_evading,17,nan,nan,nan,nan,2,56,True,27,False,auroc omitted: class < 5
+obey,P2,dom,raw,probe_evading,18,nan,nan,nan,nan,2,56,True,27,False,auroc omitted: class < 5
+obey,P2,dom,raw,probe_evading,19,nan,nan,nan,nan,2,56,True,27,False,auroc omitted: class < 5
+obey,P2,dom,raw,probe_evading,20,nan,nan,nan,nan,2,56,True,27,False,auroc omitted: class < 5
+obey,P2,dom,raw,probe_evading,21,nan,nan,nan,nan,2,56,True,27,False,auroc omitted: class < 5
+obey,P2,dom,raw,probe_evading,22,nan,nan,nan,nan,2,56,True,27,False,auroc omitted: class < 5
+obey,P2,dom,raw,probe_evading,23,nan,nan,nan,nan,2,56,True,27,False,auroc omitted: class < 5
+obey,P2,dom,raw,probe_evading,24,nan,nan,nan,nan,2,56,True,27,False,auroc omitted: class < 5
+obey,P2,dom,raw,probe_evading,25,nan,nan,nan,nan,2,56,True,27,False,auroc omitted: class < 5
+obey,P2,dom,raw,probe_evading,26,nan,nan,nan,nan,2,56,True,27,False,auroc omitted: class < 5
+obey,P2,dom,raw,probe_evading,27,nan,nan,nan,nan,2,56,True,27,True,auroc omitted: class < 5
+obey,P2,dom,raw,probe_evading,28,nan,nan,nan,nan,2,56,True,27,False,auroc omitted: class < 5
+obey,P2,dom,raw,probe_evading,29,nan,nan,nan,nan,2,56,True,27,False,auroc omitted: class < 5
+obey,P2,dom,raw,probe_evading,30,nan,nan,nan,nan,2,56,True,27,False,auroc omitted: class < 5
+obey,P2,dom,raw,probe_evading,31,nan,nan,nan,nan,2,56,True,27,False,auroc omitted: class < 5
+obey,P2,dom,raw,probe_evading,32,nan,nan,nan,nan,2,56,True,27,False,auroc omitted: class < 5
+obey,P2,dom,raw,probe_evading,33,nan,nan,nan,nan,2,56,True,27,False,auroc omitted: class < 5
+obey,P2,dom,raw,probe_evading,34,nan,nan,nan,nan,2,56,True,27,False,auroc omitted: class < 5
+obey,P2,dom,raw,probe_evading,35,nan,nan,nan,nan,2,56,True,27,False,auroc omitted: class < 5
+obey,P2,dom,raw,probe_evading,36,nan,nan,nan,nan,2,56,True,27,False,auroc omitted: class < 5

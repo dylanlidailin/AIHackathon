@@ -1,0 +1,28 @@
+{
+  "class_counts": {
+    "image": {
+      "neg": 164,
+      "pos": 9
+    },
+    "text": {
+      "neg": 94,
+      "pos": 79
+    }
+  },
+  "headline_layers": {
+    "dom": {
+      "P1": 27,
+      "P2": 27,
+      "P3": 26
+    },
+    "lr": {
+      "P1": 31,
+      "P2": 31,
+      "P3": 32
+    }
+  },
+  "n_excluded_repetition_image": 0,
+  "n_excluded_repetition_text": 0,
+  "n_folds": 5,
+  "target": "obey"
+}

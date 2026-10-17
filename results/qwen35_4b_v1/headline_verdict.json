@@ -1,0 +1,12 @@
+{
+  "labels": {
+    "dom": "ok",
+    "lr": "ok"
+  },
+  "outcome": null,
+  "per_method": {
+    "dom": "p2_works",
+    "lr": "shifted"
+  },
+  "reason": "method-dependent"
+}

@@ -1,0 +1,20 @@
+{
+  "main": {
+    "mcnemar": {
+      "b01": 9,
+      "b10": 31,
+      "p": 0.0006795482549932785
+    },
+    "obey_probes_skipped": false,
+    "text_injected_rate": 0.21965317919075145
+  },
+  "probe_evading": {
+    "mcnemar": {
+      "b01": 2,
+      "b10": 21,
+      "p": 6.604194641113281e-05
+    },
+    "obey_probes_skipped": false,
+    "text_injected_rate": 0.4827586206896552
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "labels": {
+    "dom": "ok",
+    "lr": "ok"
+  },
+  "outcome": "p2_works",
+  "per_method": {
+    "dom": "p2_works",
+    "lr": "p2_works"
+  },
+  "reason": null
+}
