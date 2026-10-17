@@ -6,7 +6,7 @@
 
 [English](#english) · [简体中文](#简体中文)
 
-Status: **first full run complete** (Qwen3.5-2B, 173 + 58 LLMail pairs). Outcome: *shared direction, shifted threshold*. See [`results/qwen35_2b_v1/headline.md`](results/qwen35_2b_v1/headline.md) for the results, [`docs/quickstart.md`](docs/quickstart.md) for the HPC workflow, and [`constitution.md`](constitution.md) for the project rules.
+Status: **runs complete on three models** (Qwen3.5-2B, Qwen3.5-4B, Qwen2.5-VL-3B; 173 + 58 LLMail pairs each). Shared finding: in late layers, a text-trained probe detects image-delivered injections (P2 AUROC ≥ 0.998 in all three). See [Results](#results), [`results/cross_model/comparison.md`](results/cross_model/comparison.md), [`docs/quickstart.md`](docs/quickstart.md) for the HPC workflow, and [`constitution.md`](constitution.md) for the project rules.
 
 ---
 
@@ -80,9 +80,25 @@ All claims are scoped to the models, renderer, and data tested.
 
 ### Models
 
-- **Primary:** Qwen3.5-2B (natively multimodal, early fusion)
-- **Fast check:** Qwen3.5-0.8B
-- **Fallback:** Qwen2.5-VL-3B (if the toolchain does not yet support Qwen3.5)
+- **Qwen3.5-2B**: primary run (natively multimodal, hybrid Gated DeltaNet + attention)
+- **Qwen3.5-4B**: same family, larger (scale check)
+- **Qwen2.5-VL-3B**: standard attention, different vision encoder and training (architecture check)
+- **Qwen3.5-0.8B**: smoke test only
+
+### Results
+
+Criteria C1–C5 were fixed before the 4B and 2.5-VL-3B runs. Full numbers: [`results/cross_model/comparison.md`](results/cross_model/comparison.md).
+
+| Criterion | Qwen3.5-2B | Qwen3.5-4B | Qwen2.5-VL-3B |
+|---|---|---|---|
+| **C1** late-layer text→image transfer (P2 AUROC) | ✓ 1.000 / 0.999 | ✓ 1.000 / 1.000 | ✓ 1.000 / 0.998 |
+| C2 threshold shift (P2 accuracy at the text threshold) | ✓ 0.50 / 0.50 | ✓ 0.50 / 0.64 | ✗ 0.99 / 0.91 |
+| C3 mid-depth dip | ✓ | ✗ | ✗ |
+| C4 text/image directions align only late | ✓ | ✓ | ✗ |
+| C5 "will obey" does not transfer | ✓ | ✗ | ✗ (low power) |
+| Obeyed injections, text vs image | 16% vs 16% | 22% vs 9% | 46% vs 5% |
+
+Values are LR / DoM. Only **C1 is shared**: late layers carry an "injection present" direction that a text-trained probe reads off images. How the threshold, the middle layers and the obey signal behave depends on the model. All claims are scoped to these models, a 22 px DejaVu Sans renderer, and LLMail-Inject scenario 1.
 
 ### Out of scope
 
@@ -196,9 +212,25 @@ This project studies detection of prompt injection to support defenses. Injected
 
 ### 模型
 
-- **主要模型：** Qwen3.5-2B（原生多模态，早期融合）
-- **快速验证：** Qwen3.5-0.8B
-- **备选：** Qwen2.5-VL-3B（若工具链尚不支持 Qwen3.5）
+- **Qwen3.5-2B**：主实验（原生多模态，Gated DeltaNet 与注意力混合架构）
+- **Qwen3.5-4B**：同一系列、更大（检验规模）
+- **Qwen2.5-VL-3B**：标准注意力，视觉编码器和训练都不同（检验架构）
+- **Qwen3.5-0.8B**：只用于冒烟测试
+
+### 结果
+
+判定标准 C1–C5 在 4B 和 2.5-VL-3B 运行之前就已固定。完整数字见 [`results/cross_model/comparison.md`](results/cross_model/comparison.md)。
+
+| 标准 | Qwen3.5-2B | Qwen3.5-4B | Qwen2.5-VL-3B |
+|---|---|---|---|
+| **C1** 深层文字→图像迁移（P2 AUROC） | ✓ 1.000 / 0.999 | ✓ 1.000 / 1.000 | ✓ 1.000 / 0.998 |
+| C2 阈值偏移（文字阈值下的 P2 准确率） | ✓ 0.50 / 0.50 | ✓ 0.50 / 0.64 | ✗ 0.99 / 0.91 |
+| C3 中间层下陷 | ✓ | ✗ | ✗ |
+| C4 文字/图像方向只在深层对齐 | ✓ | ✓ | ✗ |
+| C5 "会不会照做"不迁移 | ✓ | ✗ | ✗（样本不足） |
+| 注入被执行的比例，文字 vs 图像 | 16% vs 16% | 22% vs 9% | 46% vs 5% |
+
+数值为 LR / DoM。只有 **C1 是三个模型共有的**：深层存在一个"有注入"的方向，用文字训练的探针可以直接在图像上读出来。阈值、中间层和"会不会照做"信号的表现则因模型而异。所有结论仅限于这些模型、22 px DejaVu Sans 渲染和 LLMail-Inject 场景 1。
 
 ### 不在本项目范围内
 
