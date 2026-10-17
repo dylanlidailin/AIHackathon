@@ -64,7 +64,9 @@ class Runner:
         """float16 array [batch, n_layers + 1, hidden] at the last prompt token."""
         inputs = self._encode(messages, images)
         with self.torch.no_grad():
-            out = self.model(**inputs, output_hidden_states=True)
+            # logits only for the last position: full-sequence logits over a ~250k vocab OOM a
+            # 24 GB GPU on the 4B model, and hidden states are unaffected
+            out = self.model(**inputs, output_hidden_states=True, logits_to_keep=1)
         hs = out.hidden_states
         if len(hs) != self.n_layers + 1:
             raise RuntimeError(f"expected {self.n_layers + 1} hidden states, got {len(hs)}")
